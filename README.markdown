@@ -1,3 +1,8 @@
+Mongo/Akihbara
+==============
+
+This is gregdek's fork of Akihabara.  It's unlikely that I'll touch most of the code, but the hope is to add lots of game/resource code, and it's just simpler to fork on github than to figure out how to maintain a separate repo for games only.  :)
+
 Akihabara
 =========
 
