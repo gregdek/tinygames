@@ -3,6 +3,23 @@ Mongo/Akihbara
 
 This is gregdek's fork of Akihabara.  It's unlikely that I'll touch most of the code, but the hope is to add lots of game/resource code, and it's just simpler to fork on github than to figure out how to maintain a separate repo for games only.  :)
 
+The files that are essential to Mongo:
+
+./game-mongo.html	The main program file, and how the game is invoked.  
+			You can just "git clone" the repo and open this file
+			in your browser, and things should Just Work (tm).
+
+./akihabara/		The game libraries.
+
+./resources/audio/	Where shared audio resources live.
+
+./resources/mongo/	Home of all the levels and resources for Mongo.  
+			Where All The Action Happens.
+
+(KesieV's Original Readme follows.)
+			
+******************************************
+
 Akihabara
 =========
 
