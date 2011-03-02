@@ -55,8 +55,8 @@
 				tileset:"tiles",
 				map:[
 					[  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13],
-					[  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,   2,   2,   2,  13,  13,  13],
-					[  12,  12,  12,  12,  12,  12,  12,  12,  12,  12,   1,   1,   1,  12,  12,  12],
+					[  13,  13,   2,   2,   2,  13,  13,  13,  13,  13,   2,   2,   2,  13,  13,  13],
+					[  12,  12,   1,   1,   1,  12,  12,  12,  12,  12,   1,   1,   1,  12,  12,  12],
 					[   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  10,  11],
 					[   0,   0,   0,   0,  10,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  10],
 					[   0,   0,   0,  11,  11,  11,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0],
@@ -77,10 +77,19 @@
 					maingame.addPuzzleblock(10,210,"chest",0);
 				 },
 				 mapActions:function() {
+					// Get the player object to work with
 					var pl=gbox.getObject("player","player");
+
+					// Get the player's current x and y coords on the map
+                                        var xc=help.xPixelToTileX(tilemaps.map,pl.x+pl.colx+pl.colhw);
+                                        var yc=help.yPixelToTileY(tilemaps.map,pl.y+pl.coly+pl.colhh);
+
+					// Get the ID of the tile the player is on
 					var ontile=help.getTileInMap(pl.x+pl.colx+pl.colhw,pl.y+pl.coly+pl.colhh,tilemaps.map,tilemaps._defaultblock,"map");
-					// if (ontile==1) maingame.gotoLevel({level:"floor1",x:580,y:590,label:"Floor 1 entrance"});
-					if (ontile==1) maingame.gotoLevel({level:"math001",x:60,y:60,label:"Floor 2 entrance"});
+
+					// If he's in a cave, figure out which cave he's in and send him to the right dungeon.
+					if ((ontile==1) && (xc>=2) && (xc<=4)) maingame.gotoLevel({level:"math000",x:60,y:60,introdialogue:true,label:"Entrance 1"});
+					if ((ontile==1) && (xc>=10) && (xc<=12)) maingame.gotoLevel({level:"math000",x:60,y:60,introdialogue:true,label:"Entrance 2"});
 				 },
 				tileIsSolid:function(obj,t){ return (t>9) }
 			}
