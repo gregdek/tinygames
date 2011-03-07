@@ -88,8 +88,8 @@
 					var ontile=help.getTileInMap(pl.x+pl.colx+pl.colhw,pl.y+pl.coly+pl.colhh,tilemaps.map,tilemaps._defaultblock,"map");
 
 					// If he's in a cave, figure out which cave he's in and send him to the right dungeon.
-					if ((ontile==1) && (xc>=2) && (xc<=4)) maingame.gotoLevel({level:"math000",x:60,y:60,introdialogue:true,label:"Entrance 1"});
-					if ((ontile==1) && (xc>=10) && (xc<=12)) maingame.gotoLevel({level:"math000",x:60,y:60,introdialogue:true,label:"Entrance 2"});
+					if ((ontile==1) && (xc>=2) && (xc<=4)) maingame.gotoLevel({level:"math000",x:60,y:60,introdialogue:true,label:"Greg's Cave"});
+					if ((ontile==1) && (xc>=10) && (xc<=12)) maingame.gotoLevel({level:"generic000",x:60,y:60,introdialogue:true,label:"Unclaimed Cave"});
 				 },
 				tileIsSolid:function(obj,t){ return (t>9) }
 			}
