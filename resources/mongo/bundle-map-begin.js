@@ -39,10 +39,8 @@
 			property:"intro",
 			value:{ font:"smalltut", skipkey:"a", esckey:"b", who: noface,
 		  		scenes:[
-		  			{ speed:1, who:"noone", audio:"beep", talk:["It is said that there is a terrible","Monster hiding on the north of","the little Kariko village that", "every 70 years slays Kariko","children."]},
-		  			{ speed:1, who:"noone", audio:"beep", talk:["All the strongest and fearless among","the villagers have been sent to the","the Dark Cave to try to kill the","Monster." ]},
-		  			{ speed:1, who:"noone", audio:"beep", talk:["Today is the 15th birthday of Klin,","a brave kid from that little village."]},
-		  			{ speed:1, who:"noone", audio:"beep", talk:["Klin received his first sword and","shield and is ready to put the word","end to this terrible legend." ]},
+		  			{ speed:1, who:"noone", audio:"beep", talk:["The Dungeons of Mongo are all around you."]},
+		  			{ speed:1, who:"noone", audio:"beep", talk:["Learn math. Become a legend." ]},
 		  		]
 		  	}
 		
