@@ -20,13 +20,13 @@
                         property:"intro",
                         value:{ font:"smalltut", skipkey:"a", esckey:"b", who: noface,
                         // value:{ font:"smalltut", skipkey:"a", who: noface,
-                                scenes:[
+                                scenes:function() { return [
                                         { speed:1, who:"noone", audio:"beep", talk:["Hello child."]},
                                         { speed:1, who:"noone", audio:"beep", talk:["I will be your guide","through this maze of math."]},
                                         { speed:1, who:"noone", audio:"beep", talk:["Follow my advice","and you will again see","the light of day."]},
                                         { speed:1, who:"noone", audio:"beep", talk:["When you have solved","the maze's puzzle,"]},
                                         { speed:1, who:"noone", audio:"beep", talk:["The red button will lead you","to the next level!"]}
-                                ]
+                                ]; }
                         }
 		},
 

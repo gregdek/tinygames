@@ -1,6 +1,12 @@
-TODO:
+TODO, GREG CAVE:
+* Set Greg intro text to say "Congratulations!  This quest is already complete!" if complete
+* Set Greg cave to show "quest complete" and return user to start screen instead of ending game
+* Set main NPC text to know which quests are complete/incomplete at start of level
+* Set health to decline after wrong guess
 
 IDEAS:
+* LEVEL: combat-related and math skill
+* Saving/retrieving game state to localstorage and/or server.  Pretty important.  :)
 * Figure out a way of displaying quests completed in the HUD
 * Add another type of tile that allows a puzzle object to "click" into place.
   (i.e. if acceleration < 2, pull it to a stop.)
