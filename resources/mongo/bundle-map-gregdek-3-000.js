@@ -43,13 +43,15 @@
 					[  12,  12,  12,  12,  12,   5,   5,  12,  12,  12]
 				  ],
 				 addObjects:function() {
-					
+					// Here we add enemies. 
+					maingame.addEnemy("enemy1","octo",7,8);
+					maingame.addEnemy("enemy2","octo",8,7);
 				 },
 				 mapActions:function() {
 					
 					var pl=gbox.getObject("player","player");
 					var ontile=help.getTileInMap(pl.x+pl.colx+pl.colhw,pl.y+pl.coly+pl.colhh,tilemaps.map,tilemaps._defaultblock,"map");
-					if (ontile==5) maingame.gotoLevel({level:"begin",x:330,y:90,label:"The Village"});
+					if (ontile==5) maingame.gotoLevel({level:"begin",x:210,y:90,label:"The Village"});
 				 },
 				tileIsSolid:function(obj,t){ return (obj._bullet?(t!=13)&&(t!=14):true)&&(t>9) } // Bullets flies over the pits.
 			}

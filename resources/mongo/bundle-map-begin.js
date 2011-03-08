@@ -49,20 +49,20 @@
 			object:"tilemaps",
 			property:"map",
 			value:{					
-				title:"Kariko Village",
+				title:"The Village",
 				tileset:"tiles",
 				map:[
-					[  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13,  13],
-					[  13,  13,   2,   2,   2,  13,  13,  13,  13,  13,   2,   2,   2,  13,  13,  13],
-					[  12,  12,   1,   1,   1,  12,  12,  12,  12,  12,   1,   1,   1,  12,  12,  12],
-					[   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  10,  11],
-					[   0,   0,   0,   0,  10,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  10],
-					[   0,   0,   0,  11,  11,  11,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0],
-					[   0,   0,   0,  11,  11,   0,   0,   0,   0,   0,  11,  11,   0,   0,   0,   0],
-					[   0,   0,   0,  10,   0,   0,   0,   0,   0,   0,   0,  11,   0,   0,   0,   0],
-					[   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0],
-					[   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0],
-					[   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0],
+					[  13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+					[  13,  2,  2, 13,  2,  2, 13,  2,  2, 13,  2,  2, 13,  2,  2, 13, 13],
+					[  12,  1,  1, 12,  1,  1, 12,  1,  1, 12,  1,  1, 12,  1,  1, 12, 12],
+					[   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 10, 11,  0],
+					[   0,  0,  0,  0, 10,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 10,  0],
+					[   0,  0,  0, 11, 11, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+					[   0,  0,  0, 11, 11,  0,  0,  0,  0,  0, 11, 11,  0,  0,  0,  0,  0],
+					[   0,  0,  0, 10,  0,  0,  0,  0,  0,  0,  0, 11,  0,  0,  0,  0,  0],
+					[   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+					[   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+					[   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
 					
 				  ],
 				 playerSpawnX:40,
@@ -72,7 +72,7 @@
 					maingame.addBlock(360,150,"house",0);
 					maingame.addNpc(390,220,[4],"villager",null,[4,5]);
 					maingame.addNpc(150,180,[6],"wife",null,[6,7]);
-					maingame.addPuzzleblock(10,210,"chest",0);
+					//maingame.addPuzzleblock(10,210,"chest",0);
 				 },
 				 mapActions:function() {
 					// Get the player object to work with
@@ -86,9 +86,10 @@
 					var ontile=help.getTileInMap(pl.x+pl.colx+pl.colhw,pl.y+pl.coly+pl.colhh,tilemaps.map,tilemaps._defaultblock,"map");
 
 					// If he's in a cave, figure out which cave he's in and send him to the right dungeon.
-					if ((ontile==1) && (xc>=2) && (xc<=4)) maingame.gotoLevel({level:"gregdek-1-000",x:60,y:60,introdialogue:true,label:"Greg's First Quest"});
-					if ((ontile==1) && (xc>=10) && (xc<=12)) maingame.gotoLevel({level:"gregdek-2-000",x:60,y:60,introdialogue:true,label:"Greg's Second Quest"});
-					//if ((ontile==1) && (xc>=10) && (xc<=12)) maingame.gotoLevel({level:"generic000",x:60,y:60,introdialogue:true,label:"Unclaimed Cave"});
+					if ((ontile==1) && (xc>=1) && (xc<=2)) maingame.gotoLevel({level:"gregdek-1-000",x:60,y:60,introdialogue:true,label:"Greg's First Quest"});
+					if ((ontile==1) && (xc>=4) && (xc<=5)) maingame.gotoLevel({level:"gregdek-2-000",x:60,y:60,introdialogue:true,label:"Greg's Second Quest"});
+					if ((ontile==1) && (xc>=7) && (xc<=8)) maingame.gotoLevel({level:"gregdek-3-000",x:60,y:60,introdialogue:true,label:"Greg's Third Quest"});
+					if ((ontile==1) && (xc>8)) maingame.gotoLevel({level:"generic-000",x:60,y:60,introdialogue:true,label:"Unclaimed Cave"});
 				 },
 				tileIsSolid:function(obj,t){ return (t>9) }
 			}

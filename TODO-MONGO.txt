@@ -1,4 +1,6 @@
 TODO:
+* gregdek-3: add new basic cave with enemies
+* general: Add number associations to a monster (visible hit points?)
 * general: Set main NPC text to know which quests are complete/incomplete at start of level
 * gregcave: Set health to decline after wrong guess
 * general: illustrate how to change what NPC can say in the middle of a level

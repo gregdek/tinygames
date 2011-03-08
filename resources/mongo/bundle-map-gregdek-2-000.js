@@ -139,7 +139,9 @@
 						//maingame.addQuestClear("Booyah!");
 						tilemaps.queststatus["gregdek-2-000complete"] = true;
 					}
-                                        if (ontile==204) maingame.gotoLevel({level:"begin",x:330,y:90,label:"The Village"});
+
+					// Back to village
+                                        if (ontile==204) maingame.gotoLevel({level:"begin",x:150,y:90,label:"The Village"});
 				},
 
 				// Define tiles that are solid for this map.
