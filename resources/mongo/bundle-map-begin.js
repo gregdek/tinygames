@@ -39,7 +39,7 @@
 			property:"intro",
 			value:{ font:"smalltut", skipkey:"a", esckey:"b", who: noface,
 		  		scenes:[
-		  			{ speed:1, who:"noone", audio:"beep", talk:["The Dungeons of Mongo are all around you."]},
+		  			{ speed:1, who:"noone", audio:"beep", talk:["The Dungeons of Mongo"],["are all around you."]},
 		  			{ speed:1, who:"noone", audio:"beep", talk:["Learn math. Become a legend." ]},
 		  		]
 		  	}
