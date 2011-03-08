@@ -14,20 +14,40 @@
 		{id:"tiles",image:"tiles",tileh:30,tilew:30,tilerow:10,gapx:0,gapy:0},	
 	],
 	setObject:[
-		// First, set dialogues.  "intro" plays at level start if defined in... FIXME.
+		// First, set dialogues.  "intro" plays at level start if defined in the referring level.
+		// Here we use two potential intro dialogues, using a ternary operator to 
+		// switch between them based on whether the last level in this branch 
+		// has been completed.
+		
+		{
+                        object:"dialogues", // for level completed
+                        property:(tilemaps.queststatus["math000complete"]?"intro":"notintro"),
+                        //property:((1==0)?"intro":"notintro"),
+                        // property:"intro",
+                        value:{ 
+				font:"smalltut", skipkey:"a", esckey:"b", who: noface,
+                        // value:{ font:"smalltut", skipkey:"a", who: noface,
+                        	scenes: [
+                                        { speed:1, who:"noone", audio:"beep", talk:["You've already completed this quest!"]},
+                                ]
+			}
+		},
+
 		{
                         object:"dialogues",
-                        property:"intro",
-                        value:{ font:"smalltut", skipkey:"a", esckey:"b", who: noface,
+                        property:(!tilemaps.queststatus["math000complete"]?"intro":"notintro"),
+                        // property:"intro",
+                        value:{ 
+				font:"smalltut", skipkey:"a", esckey:"b", who: noface,
                         // value:{ font:"smalltut", skipkey:"a", who: noface,
-                                scenes:function() { return [
+                        	scenes: [
                                         { speed:1, who:"noone", audio:"beep", talk:["Hello child."]},
                                         { speed:1, who:"noone", audio:"beep", talk:["I will be your guide","through this maze of math."]},
                                         { speed:1, who:"noone", audio:"beep", talk:["Follow my advice","and you will again see","the light of day."]},
                                         { speed:1, who:"noone", audio:"beep", talk:["When you have solved","the maze's puzzle,"]},
                                         { speed:1, who:"noone", audio:"beep", talk:["The red button will lead you","to the next level!"]}
-                                ]; }
-                        }
+                                ]
+			}
 		},
 
                 {
