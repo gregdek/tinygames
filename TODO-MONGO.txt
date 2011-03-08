@@ -1,9 +1,13 @@
-TODO, SOONISH:
+TODO:
 * general: Set main NPC text to know which quests are complete/incomplete at start of level
 * gregcave: Set health to decline after wrong guess
+* general: illustrate how to change what NPC can say in the middle of a level
 
 IDEAS:
-* LEVEL: combat-related and math skill
+* Figure out how to add combat in a meaningful way.
+  + Here's an idea.  Have weapons that are factors, and monsters that are multiples of those
+    factors!  Want to kill a 15 monster?  Better find the 3 sword and the 5 sword!  Oh, I am
+    liking that idea!  And your total points = the total monster value you've killed.
 * Saving/retrieving game state to localstorage and/or server.  Pretty important.  :)
 * Figure out a way of displaying quests completed in the HUD
 * Add another type of tile that allows a puzzle object to "click" into place.
@@ -13,6 +17,7 @@ IDEAS:
   and have tile answer choices created
 
 DONE!
+* gregdek-2: Add a new quest for multiples of 5 and 3
 * gregcave: Rename files from "math00n" to something more extensible
 * gregcave: Set Greg cave to show "quest complete" and return user to start screen instead of ending game
 * gregcave: Fix bug for "no steps if in and out"
