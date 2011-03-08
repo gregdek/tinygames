@@ -1,15 +1,7 @@
 TODO:
-* Build tile set all the way up to 99 white and 99 black
-  + 0-99: various tiles
-  + 100-199: white
-  + 200-299: black
-* Set up "reset" tile (tile 29) with behaviors:
-  + If "good", give quest clear message and create key
-  + If "bad", reset all
-* Add a "quest clear" event that triggers when all odd tiles have been walked over.  (How best to do this?)
-* Add an NPC that informs user of the quest (select all odd numbers!)
 
 IDEAS:
+* Figure out a way of displaying quests completed in the HUD
 * Add another type of tile that allows a puzzle object to "click" into place.
   (i.e. if acceleration < 2, pull it to a stop.)
 * Set up a puzzle tile and puzzle object to clear a stage when joined.
@@ -17,6 +9,10 @@ IDEAS:
   and have tile answer choices created
 
 DONE!
+* Add an NPC that informs user of the quest (select all odd numbers!)
+* Add a "quest clear" event that triggers when all odd tiles have been walked over.
+* Reset tile type done
+* Build tile set all the way up to 99 white and 99 black
 * Add a "reset" tile in tileset
 * Build a map with number tiles that are simple walk-overs.
 * Build a map with number tiles that toggle on and off.
