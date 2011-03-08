@@ -21,21 +21,21 @@
 		
 		{
                         object:"dialogues", // for level completed
-                        property:(tilemaps.queststatus["math000complete"]?"intro":"notintro"),
+                        property:(tilemaps.queststatus["gregdek-1-002complete"]?"intro":"notintro"),
                         //property:((1==0)?"intro":"notintro"),
                         // property:"intro",
                         value:{ 
 				font:"smalltut", skipkey:"a", esckey:"b", who: noface,
                         // value:{ font:"smalltut", skipkey:"a", who: noface,
                         	scenes: [
-                                        { speed:1, who:"noone", audio:"beep", talk:["You've already completed this quest!"]},
+                                        { speed:1, who:"noone", audio:"beep", talk:["This quest is complete!"]},
                                 ]
 			}
 		},
 
 		{
                         object:"dialogues",
-                        property:(!tilemaps.queststatus["math000complete"]?"intro":"notintro"),
+                        property:(!tilemaps.queststatus["gregdek-1-002complete"]?"intro":"notintro"),
                         // property:"intro",
                         value:{ 
 				font:"smalltut", skipkey:"a", esckey:"b", who: noface,
@@ -74,12 +74,14 @@
 					//       200 : rock wall, impassable
 					//       201 : bare floor, passable
 					//       202 : trigger, passable
+					//       203 : stairs, passable
+					//	 204 : cave exit, passable
 					[ 200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200 ],
 					[ 200,201,201,201,201,201,201,201,201,201,201,201,201,201,201,200 ],
 					[ 200,201,201,201,201,201,201,201,201,201,201,201,201,201,201,200 ],
 					[ 200,201,201,201,201,201,201,201,201,201,201,201,201,201,201,200 ],
 					[ 200,201,201,201,201,201,201,201,201,201,201,201,201,201,201,200 ],
-					[ 200,201,201,201,201,201,201,202,201,201,201,201,201,201,201,200 ],
+					[ 200,201,201,201,201,201,201,201,201,201,201,201,201,201,201,200 ],
 					[ 200,201,201,201,201,201,201,201,201,201,201,201,201,201,201,200 ],
 					[ 200,201,201,201,201,201,201,201,201,201,201,201,201,201,201,200 ],
 					[ 200,201,201,201,201,201,201,201,201,201,201,201,201,201,201,200 ],
@@ -88,7 +90,26 @@
 
 				// Define all objects added to the map.
 				addObjects:function() {
+					// add the wife.
                                         maingame.addNpc(80,80,[6],"wife",null,[6,7]);
+
+					// has the user completed this phase before?
+					if (tilemaps.queststatus["gregdek-1-000complete"]) {
+
+						// if yes, but the user hasn't finished the whole quest,
+						// add the stairs.
+
+						if (!tilemaps.queststatus["gregdek-1-002complete"]) {
+							maingame.setTileInMap(4,4,203,true);
+						}
+
+					}
+
+					else {
+						// user hasn't completed gregdek-1-000, add the trigger.
+						maingame.setTileInMap(12,7,202,true);
+					}
+
 				},
 
 				// Define all actions triggered by the map.
@@ -106,11 +127,11 @@
 					}
 
 					// On stairs?  Go to the next level.
-                                        if (ontile==203) { maingame.gotoLevel({level:"math001",x:90,y:90,introdialogue:true,label:"Dungeon Level 1: Land of the Odd"}); }
+                                        if (ontile==203) { maingame.gotoLevel({level:"gregdek-1-001",x:90,y:90,introdialogue:true,label:"Dungeon Level 1: Land of the Odd"}); }
 
 					// On trigger?  Create the stairs.
 
-					if ((ontile==202) && (!tilemaps.queststatus["math000complete"])) {
+					if ((ontile==202) && (!tilemaps.queststatus["gregdek-1-000complete"])) {
 
 						// 202 is the red button that triggers the puzzle test, until the quest is cleared.  
 						// 
@@ -118,9 +139,9 @@
 
 						maingame.setTileInMap(4,4,203,true);	
 						//maingame.addQuestClear("Booyah!");
-						tilemaps.queststatus["math000complete"] = true;
+						tilemaps.queststatus["gregdek-1-000complete"] = true;
 					}
-                                        if (ontile==204) maingame.gotoLevel({level:"begin",x:330,y:90,label:"The Village"});
+                                        if (ontile==204) maingame.gotoLevel({level:"begin",x:110,y:90,label:"The Village"});
 				},
 
 				// Define tiles that are solid for this map.

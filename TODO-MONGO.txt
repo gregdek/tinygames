@@ -1,8 +1,6 @@
-TODO, GREG CAVE:
-* Set Greg intro text to say "Congratulations!  This quest is already complete!" if complete
-* Set Greg cave to show "quest complete" and return user to start screen instead of ending game
-* Set main NPC text to know which quests are complete/incomplete at start of level
-* Set health to decline after wrong guess
+TODO, SOONISH:
+* general: Set main NPC text to know which quests are complete/incomplete at start of level
+* gregcave: Set health to decline after wrong guess
 
 IDEAS:
 * LEVEL: combat-related and math skill
@@ -15,6 +13,11 @@ IDEAS:
   and have tile answer choices created
 
 DONE!
+* gregcave: Rename files from "math00n" to something more extensible
+* gregcave: Set Greg cave to show "quest complete" and return user to start screen instead of ending game
+* gregcave: Fix bug for "no steps if in and out"
+* gregcave: Set player to come out of cave in the right place
+* Set Greg intro text to say "This quest is already complete!" if complete
 * Add an NPC that informs user of the quest (select all odd numbers!)
 * Add a "quest clear" event that triggers when all odd tiles have been walked over.
 * Reset tile type done

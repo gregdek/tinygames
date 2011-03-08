@@ -83,11 +83,11 @@
 					}
 
 					// On stairs?  Go to the next level.
-                                        if (ontile==203) { maingame.gotoLevel({level:"math001",x:90,y:90,introdialogue:true,label:"Dungeon Level 1: Land of the Odd"}); }
+                                        if (ontile==203) { maingame.gotoLevel({level:"gregdek-1-001",x:90,y:90,introdialogue:true,label:"Dungeon Level 1: Land of the Odd"}); }
 
 					// On trigger?  Create the stairs.
 
-					if ((ontile==202) && (!tilemaps.queststatus["math000complete"])) {
+					if ((ontile==202) && (!tilemaps.queststatus["gregdek-1-000complete"])) {
 
 						// 202 is the red button that triggers the puzzle test, until the quest is cleared.  
 						// 
@@ -95,7 +95,7 @@
 
 						maingame.setTileInMap(4,4,203,true);	
 						//maingame.addQuestClear("Booyah!");
-						tilemaps.queststatus["math000complete"] = true;
+						tilemaps.queststatus["gregdek-1-000complete"] = true;
 					}
 				},
 

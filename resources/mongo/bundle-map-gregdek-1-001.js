@@ -89,14 +89,14 @@
 					}
 
                                         // On stairs?  Go to the next level.
-                                        if (ontile==203) { maingame.gotoLevel({level:"math002",x:90,y:90,introdialogue:true,label:"Dungeon Level 2: Even Steven!"}); }
+                                        if (ontile==203) { maingame.gotoLevel({level:"gregdek-1-002",x:90,y:90,introdialogue:true,label:"Dungeon Level 2: Even Steven!"}); }
 
 					// Tests number walls.
 					// If test is passed, create a key object [FIXME].
 					// If test is failed, reset number walls to number walkovers.
 					//   (and remove health? FIXME)
 
-					if ((ontile==202) && (!tilemaps.queststatus["math001complete"])) {
+					if ((ontile==202) && (!tilemaps.queststatus["gregdek-1-001complete"])) {
 
 						// 202 is the red button that triggers the puzzle test, until the quest is cleared.  
 						// 
@@ -104,7 +104,7 @@
 						// means that if we find any odd tiles < 100, or any even tiles
 						// betweeen 100 and 200, then we FAIL it.
 						
-						tilemaps.queststatus["_tmpmath001fail"]=false;
+						tilemaps.queststatus["_tmpgregdek-1-001fail"]=false;
 						for (var ty=0; ty<tilemaps.map.map.length; ty++) {
 							for (var tx=0; tx<tilemaps.map.map[ty].length; tx++) {
 								var tilenum = tilemaps.map.map[ty][tx]; 
@@ -115,12 +115,12 @@
 									(((tilenum>=0) && (tilenum<100)) && (tilenum % 2 == 1)) 
 								) {
 									// then fail it!
-									tilemaps.queststatus["_tmpmath001fail"]=true;
+									tilemaps.queststatus["_tmpgregdek-1-001fail"]=true;
 								}
 							}
 						}
 
-						if (tilemaps.queststatus["_tmpmath001fail"]==true) {
+						if (tilemaps.queststatus["_tmpgregdek-1-001fail"]==true) {
 							for (var ty=0; ty<tilemaps.map.map.length; ty++) {
 								for (var tx=0; tx<tilemaps.map.map[ty].length; tx++) {
 									if (tilemaps.map.map[ty][tx]>=100 && tilemaps.map.map[ty][tx]<200) {
@@ -134,7 +134,7 @@
 						else {
 	                                                maingame.setTileInMap(xc+1,yc+1,203,true);
         	                                        maingame.addQuestClear("Got it!");
-							tilemaps.queststatus["math001complete"] = true;
+							tilemaps.queststatus["gregdek-1-001complete"] = true;
 						}
 					}
 				},
