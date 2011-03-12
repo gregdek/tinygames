@@ -126,7 +126,7 @@
 	 		  maingame.initializeGame=function() {
 	 		  
 	 		  	// Prepare hud
-		 		maingame.hud.setWidget("weapon",{widget:"radio",value:0,tileset:"items",frames:[0],dx:10,dy:10});
+		 		maingame.hud.setWidget("weapon",{widget:"radio",value:0,tileset:"items",frames:[0,1,2,3],dx:10,dy:10});
 	 		  	maingame.hud.setWidget("health",{widget:"symbols",tiles:[3,2,1,0],minvalue:0,maxvalue:20,value:12-(maingame.difficulty*4),maxshown:4,tileset:"hud",emptytile:4,dx:40,dy:10,gapx:20,gapy:0});
 	 		  	maingame.hud.setWidget("cash",{widget:"label",font:"small",value:0,minvalue:0,maxvalue:100,dx:gbox.getScreenW()-60,dy:gbox.getScreenH()-24,prepad:3,padwith:" ",clear:true});
 		 		maingame.hud.setWidget("SMALLKEY",{widget:"label",font:"small",value:0,minvalue:0,maxvalue:999,dx:gbox.getScreenW()-60,dy:gbox.getScreenH()-43,prepad:3,padwith:" ",clear:true});
@@ -216,43 +216,68 @@
 
 						this.stilltimer=10; // Stay still for a while
 						this.frame=(this.facing==toys.FACE_UP?9:(this.facing==toys.FACE_DOWN?10:11));
-						
+					
 						switch (maingame.hud.getValue("weapon","value")) {
-							case 0: { // Sword
+							case 0: { // Sword, power 2
 								toys.topview.fireBullet("playerbullets",null,{
-									fullhit:true,
-									collidegroup:"foes",
-									undestructable:true, // Custom attribute. Is not destroyed by the hitted object.
-									power:1, // Custom attribute. Is the damage value of this weapon.
-									from:this,
-									sidex:this.facing,
-									sidey:this.facing,
-									tileset:((this.facing==toys.FACE_LEFT)||(this.facing==toys.FACE_RIGHT)?"lefthit":"uphit"),
+									power:2, // Custom attribute. Is the damage value of this weapon.
 									frames:{speed:1,frames:[0,1,2,3]},
-									duration:4,
-									acc:5,
-									fliph:(this.facing==toys.FACE_RIGHT),
-									flipv:(this.facing==toys.FACE_DOWN),
+									fullhit:true, collidegroup:"foes", undestructable:true, 
+									from:this, sidex:this.facing, sidey:this.facing,
+									tileset:((this.facing==toys.FACE_LEFT)||(this.facing==toys.FACE_RIGHT)?"lefthit":"uphit"),
+									duration:4, acc:5,
+									fliph:(this.facing==toys.FACE_RIGHT), flipv:(this.facing==toys.FACE_DOWN),
 									angle:toys.FACES_ANGLE[this.facing]
 								});
 								break;
 							}
-							case 1: { // Arrows
+							case 2: { // Sword, power 3
 								toys.topview.fireBullet("playerbullets",null,{
+									power:3, // Custom attribute. Is the damage value of this weapon.
+									frames:{speed:1,frames:[0,1,2,3]},
+									fullhit:true, collidegroup:"foes", undestructable:true, 
+									from:this, sidex:this.facing, sidey:this.facing,
+									tileset:((this.facing==toys.FACE_LEFT)||(this.facing==toys.FACE_RIGHT)?"lefthit":"uphit"),
+									duration:4, acc:5,
+									fliph:(this.facing==toys.FACE_RIGHT), flipv:(this.facing==toys.FACE_DOWN),
+									angle:toys.FACES_ANGLE[this.facing]
+								});
+								break;
+							}
+							case 1: { // Arrow, power 2
+								toys.topview.fireBullet("playerbullets",null,{
+									power:2, // Custom attribute. Is the damage value of this weapon.
 									_canhitswitch:true, // Arrows can hit switchs and turn them on
-									fullhit:true,
-									collidegroup:"foes",
+									fullhit:true, collidegroup:"foes", 
 									map:tilemaps.map, // Map is specified, since collides with walls
 									mapindex:"map",
 									defaulttile:tilemaps._defaultblock,
 									undestructable:false, // Custom attribute. Is destroyed by the hitted object.
-									power:2, // Custom attribute. Is the damage value of this weapon.
-									from:this,
-									sidex:this.facing,
-									sidey:this.facing,
+									from:this, sidex:this.facing, sidey:this.facing,
 									tileset:((this.facing==toys.FACE_LEFT)||(this.facing==toys.FACE_RIGHT)?"leftarrow":"uparrow"),
 									frames:{speed:1,frames:[0,1]},
-									acc:5,
+									acc:4, // Arrow speed equals power x 2
+									fliph:(this.facing==toys.FACE_RIGHT),
+									flipv:(this.facing==toys.FACE_DOWN),
+									angle:toys.FACES_ANGLE[this.facing],
+									spritewalls:"walls",
+									gapy:8 // Avoid wall collision on start
+								}); 
+								break;
+							}
+							case 1: { // Arrow, power 3
+								toys.topview.fireBullet("playerbullets",null,{
+									power:3, // Custom attribute. Is the damage value of this weapon.
+									_canhitswitch:true, // Arrows can hit switchs and turn them on
+									fullhit:true, collidegroup:"foes", 
+									map:tilemaps.map, // Map is specified, since collides with walls
+									mapindex:"map",
+									defaulttile:tilemaps._defaultblock,
+									undestructable:false, // Custom attribute. Is destroyed by the hitted object.
+									from:this, sidex:this.facing, sidey:this.facing,
+									tileset:((this.facing==toys.FACE_LEFT)||(this.facing==toys.FACE_RIGHT)?"leftarrow":"uparrow"),
+									frames:{speed:1,frames:[0,1]},
+									acc:6, // Arrow speed equals power x 2
 									fliph:(this.facing==toys.FACE_RIGHT),
 									flipv:(this.facing==toys.FACE_DOWN),
 									angle:toys.FACES_ANGLE[this.facing],
@@ -684,7 +709,7 @@
 		}
 		
 		// Add an enemy
-		maingame.addEnemy=function(id,type,x,y,cloud) {
+		maingame.addEnemy=function(id,type,x,y,h,s,cloud) {
 			var td=gbox.getTiles(tilemaps.map.tileset);
 
 			var ob;
@@ -740,11 +765,15 @@
 						stilltimer:0, // Custom attribute. A timer that keep the enemy still.
 						x:x*td.tilew,
 						y:y*td.tileh,
+						maxacc:s,
+						controlmaxacc:s, 
 								
 						initialize:function() {
 							toys.topview.initialize(this,{
 	
-								health:3, // Custom attribute. Indicates the strength.
+								// health:3, // Custom attribute. Indicates the strength.
+								health:h, // Now specified in the function params
+								speed:s,
 								shadow:{tileset:"shadows",tile:0},
 								frames:{
 									standup:{ speed:1, frames:[1] },
@@ -797,15 +826,36 @@
 						},
 						
 						hitByBullet:function(by) {
+							// So we're changing this monster so that his health
+							// only goes down if he's hit by a weapon with a by.power
+							// that is a factor of his health.  Cool, right?  And if
+							// it's *not* a power, then the monster gets *stronger*
+							// and *speeds up*!
 							if (!this.invultimer) { // If is not invulnerable
-								this.health-=by.power; // Decrease power
-								if (this.health<=0) // If dead..
-									this.kill(); // Kill...
-								else { // Else is just hit
+								if (this.health == by.power) {
+									// It's a kill shot!
+									this.kill();
+								}
+								else if (this.health % by.power == 0) {
+									// A good hit, but not a kill shot! 
+									this.health /= by.power; // Decrease power
+									this.speed -= by.power; // Slow down...
 									this.accz=-5; // A little jump...
 									this.invultimer=10; // Stay invulnerable for a while...
 									this.stilltimer=10; // Stay still for a while...
-									maingame.addQuestClear(this.health);
+									maingame.addQuestClear((this.health*by.power) + '/' + by.power + '=' + this.health);
+								}
+								else {
+									// A bad hit -- monster gets stronger!
+									this.health *= by.power;
+									// And faster!
+									this.speed += by.power;
+									// And a BIG jump!
+									this.accz=-10; // A little jump...
+									// And clear invulnerable and still timers! 
+									this.invultimer=2; // Need it set briefly to prevent double-hit
+									this.stilltimer=0;
+									maingame.addQuestClear((this.health/by.power) + 'x' + by.power + '=' + this.health);
 								}
 								return by.undestructable; // Destroy or not a bullet (decided by the bullet itself)
 							}
@@ -820,9 +870,8 @@
 								// Counter
 								this.counter=(this.counter+1)%60;
 								if (!this.killed) {
-									// GDK note: this whole block defines monster movement.  Ripping it off
-									// for puzzle block code.
-									if (!this.stilltimer) toys.topview.wander(this,tilemaps.map,"map",100,{speed:1,minstep:20,steprange:150}); // tile collisions
+									//if (!this.stilltimer) toys.topview.wander(this,tilemaps.map,"map",100,{speed:1,minstep:20,steprange:150}); // tile collisions
+									if (!this.stilltimer) toys.topview.wander(this,tilemaps.map,"map",100,{speed:this.speed,minstep:20,steprange:150}); // tile collisions
 									if ((!this.stilltimer)&&toys.timer.randomly(this,"fire",{base:50,range:50})) this.attack(); // Fires randomly
 									toys.topview.handleAccellerations(this);
 									toys.topview.handleGravity(this); // z-gravity

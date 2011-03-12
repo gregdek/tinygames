@@ -1,11 +1,9 @@
 TODO:
-* new monster code
-  + customize monster class to accept new param, health
-  + customize monster class to display different enemy sprite depending on health
-    (primes: 1 2 3 5 7 11 13 17 23 29) 
+* new graphics for weapons: 5, 7
 * general: Set main NPC text to know which quests are complete/incomplete at start of level
-* gregcave: Set health to decline after wrong guess
+* gregcave: Set health to decline after wrong guess?
 * general: illustrate how to change what NPC can say in the middle of a level
+* customize monster class to display different enemy sprite depending on health?  or no?
 
 IDEAS:
 * Figure out how to add combat in a meaningful way.
@@ -21,6 +19,9 @@ IDEAS:
   and have tile answer choices created
 
 DONE!
+* new graphics for weapons: 2, 3
+* showing new weapons in the HUD
+* Customized enemy instantiation to accept new params: health and speed
 * Added visible hit points to "octo" enemy class upon strike
 * gregdek-3: add new basic cave with enemies
 * gregdek-2: Add a new quest for multiples of 5 and 3

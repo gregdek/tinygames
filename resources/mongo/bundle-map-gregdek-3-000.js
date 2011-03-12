@@ -44,8 +44,10 @@
 				  ],
 				 addObjects:function() {
 					// Here we add enemies. 
-					maingame.addEnemy("enemy1","octo",7,8);
-					maingame.addEnemy("enemy2","octo",8,7);
+					// Params: id, type, x, y, health, speed
+					// Faster than 10 can be problematic for gameplay
+					maingame.addEnemy("enemy1","octo",7,8,(2*2*3),(2+2+3));
+					maingame.addEnemy("enemy2","octo",8,7,(2*2*3*3),(2+2+3+3));
 				 },
 				 mapActions:function() {
 					

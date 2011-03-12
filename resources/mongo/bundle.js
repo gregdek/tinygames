@@ -2,7 +2,7 @@
 	// Graphic resources.
 	addImage:[	
 		["logo","resources/mongo/logo.png"],
-		["sprites","resources/mongo/cels.png"],
+		["sprites","resources/mongo/cels2.png"],
 		["font","resources/mongo/font.png"],
 		["fontbig","resources/mongo/fontbig.png"],
 		["99numbers","resources/mongo/99numbers.png"]
@@ -36,7 +36,7 @@
 		{id:"leftarrow",image:"sprites",tileh:12,tilew:30,tilerow:2,gapx:0,gapy:320},
 		{id:"uparrow",image:"sprites",tileh:30,tilew:12,tilerow:2,gapx:0,gapy:332},
 		
-		{id:"items",image:"sprites",tileh:20,tilew:20,tilerow:2,gapx:0,gapy:362},
+		{id:"items",image:"sprites",tileh:20,tilew:20,tilerow:4,gapx:0,gapy:362},
 		{id:"npc",image:"sprites",tileh:30,tilew:30,tilerow:10,gapx:0,gapy:382},
 		
 		{id:"house",image:"sprites",tileh:90,tilew:90,tilerow:1,gapx:0,gapy:412}

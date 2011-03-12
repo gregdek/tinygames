@@ -786,7 +786,9 @@ var toys={
 						x:0, y:0,
 						accx:0, accy:0,
 						frames:{},
-						maxacc:5, controlmaxacc:5,
+						//maxacc:5, controlmaxacc:5,
+						// set it to 20.  What then?
+						maxacc:20, controlmaxacc:20,
 						responsive:0, // Responsiveness
 						bounds:{x:0,y:0,w:gbox.getScreenW(),h:gbox.getScreenH()}, // Bounds box (ship cannot exit from there)
 						weapon:0, // Weapon
