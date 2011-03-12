@@ -1,5 +1,4 @@
 TODO:
-* new graphics for weapons: 5, 7
 * general: Set main NPC text to know which quests are complete/incomplete at start of level
 * gregcave: Set health to decline after wrong guess?
 * general: illustrate how to change what NPC can say in the middle of a level
@@ -19,6 +18,7 @@ IDEAS:
   and have tile answer choices created
 
 DONE!
+* new graphics for weapons: 5, 7
 * new graphics for weapons: 2, 3
 * showing new weapons in the HUD
 * Customized enemy instantiation to accept new params: health and speed

@@ -126,7 +126,8 @@
 	 		  maingame.initializeGame=function() {
 	 		  
 	 		  	// Prepare hud
-		 		maingame.hud.setWidget("weapon",{widget:"radio",value:0,tileset:"items",frames:[0,1,2,3],dx:10,dy:10});
+		 		// Starting weapons.  The following line is "all weapons":
+		 		maingame.hud.setWidget("weapon",{widget:"radio",value:0,tileset:"items",frames:[0,1,2,3,4,5,6,7],dx:10,dy:10});
 	 		  	maingame.hud.setWidget("health",{widget:"symbols",tiles:[3,2,1,0],minvalue:0,maxvalue:20,value:12-(maingame.difficulty*4),maxshown:4,tileset:"hud",emptytile:4,dx:40,dy:10,gapx:20,gapy:0});
 	 		  	maingame.hud.setWidget("cash",{widget:"label",font:"small",value:0,minvalue:0,maxvalue:100,dx:gbox.getScreenW()-60,dy:gbox.getScreenH()-24,prepad:3,padwith:" ",clear:true});
 		 		maingame.hud.setWidget("SMALLKEY",{widget:"label",font:"small",value:0,minvalue:0,maxvalue:999,dx:gbox.getScreenW()-60,dy:gbox.getScreenH()-43,prepad:3,padwith:" ",clear:true});
@@ -212,6 +213,12 @@
 					},
 					
 					attack:function() {
+
+						// All attack functions, with a switch that differentiates
+						// behavior by weapon.  Weapon ids are pulled from the active
+						// item in the HUD.  Note: this can be extended to items
+						// that are not necessarily weapons!
+
 						gbox.hitAudio("sword");
 
 						this.stilltimer=10; // Stay still for a while
@@ -244,6 +251,32 @@
 								});
 								break;
 							}
+							case 4: { // Sword, power 5
+								toys.topview.fireBullet("playerbullets",null,{
+									power:5, // Custom attribute. Is the damage value of this weapon.
+									frames:{speed:1,frames:[0,1,2,3]},
+									fullhit:true, collidegroup:"foes", undestructable:true, 
+									from:this, sidex:this.facing, sidey:this.facing,
+									tileset:((this.facing==toys.FACE_LEFT)||(this.facing==toys.FACE_RIGHT)?"lefthit":"uphit"),
+									duration:4, acc:5,
+									fliph:(this.facing==toys.FACE_RIGHT), flipv:(this.facing==toys.FACE_DOWN),
+									angle:toys.FACES_ANGLE[this.facing]
+								});
+								break;
+							}
+							case 6: { // Sword, power 7
+								toys.topview.fireBullet("playerbullets",null,{
+									power:7, // Custom attribute. Is the damage value of this weapon.
+									frames:{speed:1,frames:[0,1,2,3]},
+									fullhit:true, collidegroup:"foes", undestructable:true, 
+									from:this, sidex:this.facing, sidey:this.facing,
+									tileset:((this.facing==toys.FACE_LEFT)||(this.facing==toys.FACE_RIGHT)?"lefthit":"uphit"),
+									duration:4, acc:5,
+									fliph:(this.facing==toys.FACE_RIGHT), flipv:(this.facing==toys.FACE_DOWN),
+									angle:toys.FACES_ANGLE[this.facing]
+								});
+								break;
+							}
 							case 1: { // Arrow, power 2
 								toys.topview.fireBullet("playerbullets",null,{
 									power:2, // Custom attribute. Is the damage value of this weapon.
@@ -265,7 +298,7 @@
 								}); 
 								break;
 							}
-							case 1: { // Arrow, power 3
+							case 3: { // Arrow, power 3
 								toys.topview.fireBullet("playerbullets",null,{
 									power:3, // Custom attribute. Is the damage value of this weapon.
 									_canhitswitch:true, // Arrows can hit switchs and turn them on
@@ -278,6 +311,48 @@
 									tileset:((this.facing==toys.FACE_LEFT)||(this.facing==toys.FACE_RIGHT)?"leftarrow":"uparrow"),
 									frames:{speed:1,frames:[0,1]},
 									acc:6, // Arrow speed equals power x 2
+									fliph:(this.facing==toys.FACE_RIGHT),
+									flipv:(this.facing==toys.FACE_DOWN),
+									angle:toys.FACES_ANGLE[this.facing],
+									spritewalls:"walls",
+									gapy:8 // Avoid wall collision on start
+								}); 
+								break;
+							}
+							case 5: { // Arrow, power 5
+								toys.topview.fireBullet("playerbullets",null,{
+									power:5, // Custom attribute. Is the damage value of this weapon.
+									_canhitswitch:true, // Arrows can hit switchs and turn them on
+									fullhit:true, collidegroup:"foes", 
+									map:tilemaps.map, // Map is specified, since collides with walls
+									mapindex:"map",
+									defaulttile:tilemaps._defaultblock,
+									undestructable:false, // Custom attribute. Is destroyed by the hitted object.
+									from:this, sidex:this.facing, sidey:this.facing,
+									tileset:((this.facing==toys.FACE_LEFT)||(this.facing==toys.FACE_RIGHT)?"leftarrow":"uparrow"),
+									frames:{speed:1,frames:[0,1]},
+									acc:10, // Arrow speed equals power x 2
+									fliph:(this.facing==toys.FACE_RIGHT),
+									flipv:(this.facing==toys.FACE_DOWN),
+									angle:toys.FACES_ANGLE[this.facing],
+									spritewalls:"walls",
+									gapy:8 // Avoid wall collision on start
+								}); 
+								break;
+							}
+							case 7: { // Arrow, power 7
+								toys.topview.fireBullet("playerbullets",null,{
+									power:7, // Custom attribute. Is the damage value of this weapon.
+									_canhitswitch:true, // Arrows can hit switchs and turn them on
+									fullhit:true, collidegroup:"foes", 
+									map:tilemaps.map, // Map is specified, since collides with walls
+									mapindex:"map",
+									defaulttile:tilemaps._defaultblock,
+									undestructable:false, // Custom attribute. Is destroyed by the hitted object.
+									from:this, sidex:this.facing, sidey:this.facing,
+									tileset:((this.facing==toys.FACE_LEFT)||(this.facing==toys.FACE_RIGHT)?"leftarrow":"uparrow"),
+									frames:{speed:1,frames:[0,1]},
+									acc:14, // Arrow speed equals power x 2
 									fliph:(this.facing==toys.FACE_RIGHT),
 									flipv:(this.facing==toys.FACE_DOWN),
 									angle:toys.FACES_ANGLE[this.facing],
@@ -770,9 +845,7 @@
 								
 						initialize:function() {
 							toys.topview.initialize(this,{
-	
-								// health:3, // Custom attribute. Indicates the strength.
-								health:h, // Now specified in the function params
+								health:h,
 								speed:s,
 								shadow:{tileset:"shadows",tile:0},
 								frames:{
