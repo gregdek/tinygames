@@ -91,11 +91,13 @@
 					//   id, type, x, y, health, speed
 					// Faster than 10 can be problematic for gameplay
 					// Faster than 8 allows them to jump thru 1x1 walls
-					// FIXME: set faster speeds when speed bug is fixed
-					maingame.addEnemy("gregdek-3-enemy2x","octo",1,11,(2*2),2);
-					maingame.addEnemy("gregdek-3-enemy3x","octo",5,11,(3*3),3);
-					maingame.addEnemy("gregdek-3-enemy5x","octo",9,11,(5*5),5);
-					maingame.addEnemy("gregdek-3-enemy7x","octo",13,11,(7*7),7);
+
+					// Also make sure that they're not recreated if they've already been killed
+
+					if (!tilemaps.queststatus["gregdek-3-000-enemy2x"]) maingame.addEnemy("gregdek-3-000-enemy2x","octo",1,11,(2*2),2);
+					if (!tilemaps.queststatus["gregdek-3-000-enemy3x"]) maingame.addEnemy("gregdek-3-000-enemy3x","octo",5,11,(3*3),3);
+					if (!tilemaps.queststatus["gregdek-3-000-enemy5x"]) maingame.addEnemy("gregdek-3-000-enemy5x","octo",9,11,(5*5),5);
+					if (!tilemaps.queststatus["gregdek-3-000-enemy7x"]) maingame.addEnemy("gregdek-3-000-enemy7x","octo",13,11,(7*7),7);
 
 					// Now add a couple of objects that are just lying around.
 					// Params:
@@ -105,10 +107,8 @@
 						maingame.addBonus((3*30),(5*30),"SMALLKEY","gregdek-3-key2x",0);
 					}
 
-					if (!tilemaps.queststatus["sword3x"]) {
-						maingame.addBonus((1*30),(8*30),"sword","sword3x",0);
+					if (!tilemaps.queststatus["sword2x"]) {
 						maingame.addBonus((1*30),(1*30),"sword","sword2x",0);
-						maingame.addBonus((3*30),(1*30),"arrow","arrow2x",0);
 					}
 				 },
 				 mapActions:function() {

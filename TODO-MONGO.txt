@@ -1,14 +1,6 @@
 TODO:
-* fix bug dealing with radio buttons and index vs. value
-  + the only time we care about getting value by reference is when
-    we reach the "firing" procedure.  Which is pulling raw value,
-    but should really be pulling the array index of the value...
-    but what's the syntax to describe that?  
-      + Find the place in toys.js called when weapon is fired
-      + Make an exact duplicate of that call and tinker
 * build out a full quest for the factor game!
-  + add swords and arrows to the list of gettable items
-  + figure out how old man gives sword 
+  + finish quest
 * Q3: Figure out how to ditch "quest clear" message after oldman talks
 * general: change NPC text for Village
 * general: put "=" into the font (appears to be missing)

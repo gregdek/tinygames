@@ -928,7 +928,9 @@
 							toys.generate.sparks.simple(this,"sparks",null,{animspeed:2,accy:-3,tileset:"flame-blue"});
 							toys.generate.sparks.simple(this,"sparks",null,{animspeed:1,accx:-3,tileset:"flame-blue"});
 							toys.generate.sparks.simple(this,"sparks",null,{animspeed:1,accx:3,tileset:"flame-blue"});
-							if (help.random(0,2)==0) maingame.addBonus(this.x,this.y,"coin"); // reward with a coin, sometime
+							// if (help.random(0,2)==0) maingame.addBonus(this.x,this.y,"coin"); // reward with a coin, sometime
+							maingame.addBonus(this.x,this.y,"coin"); // reward with a coin every time, don't be stingy :)
+							tilemaps.queststatus[this.id]=true;  // add this monster to the killed list
 							gbox.trashObject(this); // Vanish!
 						},
 						
