@@ -70,8 +70,8 @@
 					// Exit to previous level 
 					if ((xc==1) && (yc==0)) maingame.gotoLevel({level:"gregdek-3-000",x:(1*30),y:(16*30),label:""});
 
-					// Exit to next level (except right now it's the village)
-					if ((xc==8) && (yc==7)) maingame.gotoLevel({level:"begin",x:(8*30),y:(3*30),label:"The Village"});
+					// Exit to next level 
+					if ((xc==8) && (yc==7)) maingame.gotoLevel({level:"gregdek-3-002",x:(1*30),y:(9*30),label:""});
 				 },
 				tileIsSolid:function(obj,t){ return (obj._bullet?(t!=13)&&(t!=14):true)&&(t>9) } // Bullets flies over the pits.
 			}

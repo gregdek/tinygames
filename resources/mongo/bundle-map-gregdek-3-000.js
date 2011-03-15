@@ -66,7 +66,7 @@
 					[  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,  12], // 14
 					[  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,  12], // 15
 					[  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,  12], // 16
-					[  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,   6,  12,  12,   6,   6,  12,  12,   5,  12], // 17
+					[  12,   6,  12,  12,  12,   6,  12,  12,  12,   6,  12,  12,  12,   6,  12,  12,  12,   5,  12], // 17
 				  ],
 				 addObjects:function() {
 
@@ -116,8 +116,15 @@
 					var pl=gbox.getObject("player","player");
 					var ontile=help.getTileInMap(pl.x+pl.colx+pl.colhw,pl.y+pl.coly+pl.colhh,tilemaps.map,tilemaps._defaultblock,"map");
 
+					// Get the player's current x and y coords on the map
+                                        var xc=help.xPixelToTileX(tilemaps.map,pl.x+pl.colx+pl.colhw);
+                                        var yc=help.yPixelToTileY(tilemaps.map,pl.y+pl.coly+pl.colhh);
+
 					// Trigger: stepping on "5" tile goes back to village
 					if (ontile==5) maingame.gotoLevel({level:"begin",x:210,y:90,label:"The Village"});
+
+					// Exit to next level 
+					if ((xc==1) && (yc==17)) maingame.gotoLevel({level:"gregdek-3-001",x:(1*30),y:(1*30),label:""});
 				 },
 				tileIsSolid:function(obj,t){ return (obj._bullet?(t!=13)&&(t!=14):true)&&(t>9) } // Bullets flies over the pits.
 			}
