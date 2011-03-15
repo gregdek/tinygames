@@ -2,7 +2,7 @@
 	// Graphic resources.
 	addImage:[	
 		["logo","resources/mongo/logo.png"],
-		["sprites","resources/mongo/cels2.png"],
+		["sprites","resources/mongo/cels3.png"],
 		["font","resources/mongo/font.png"],
 		["fontbig","resources/mongo/fontbig.png"],
 		["99numbers","resources/mongo/99numbers.png"]

@@ -1,16 +1,30 @@
 TODO:
+* fix bug dealing with radio buttons and index vs. value
+  + the only time we care about getting value by reference is when
+    we reach the "firing" procedure.  Which is pulling raw value,
+    but should really be pulling the array index of the value...
+    but what's the syntax to describe that?  
+      + Find the place in toys.js called when weapon is fired
+      + Make an exact duplicate of that call and tinker
+* build out a full quest for the factor game!
+  + add swords and arrows to the list of gettable items
+  + figure out how old man gives sword 
+* Q3: Figure out how to ditch "quest clear" message after oldman talks
+* general: change NPC text for Village
+* general: put "=" into the font (appears to be missing)
 * general: Set main NPC text to know which quests are complete/incomplete at start of level
 * gregcave: Set health to decline after wrong guess?
 * general: illustrate how to change what NPC can say in the middle of a level
 * customize monster class to display different enemy sprite depending on health?  or no?
+* Get common core math skill listing into the git repo as a separate "TODO"
 
 IDEAS:
-* Figure out how to add combat in a meaningful way.
-  + Here's an idea.  Have weapons that are factors, and monsters that are multiples of those
-    factors!  Want to kill a 15 monster?  Better find the 3 sword and the 5 sword!  Oh, I am
-    liking that idea!  And your total points = the total monster value you've killed.
+
+* Start up mongo-devel list?
+* Add map functionality
 * Saving/retrieving game state to localstorage and/or server.  Pretty important.  :)
 * Figure out a way of displaying quests completed in the HUD
+* Add more useful items, and add shops to buy them (just copy Zelda?)
 * Add another type of tile that allows a puzzle object to "click" into place.
   (i.e. if acceleration < 2, pull it to a stop.)
 * Set up a puzzle tile and puzzle object to clear a stage when joined.
@@ -18,6 +32,9 @@ IDEAS:
   and have tile answer choices created
 
 DONE!
+* Fixed tricky bug re: calling weapons in HUD by id (wrong) instead of reference (right)
+* Q3: set it so the key is only given once and the doors stay opened once open
+* keys figured out
 * new graphics for weapons: 5, 7
 * new graphics for weapons: 2, 3
 * showing new weapons in the HUD

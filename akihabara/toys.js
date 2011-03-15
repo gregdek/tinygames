@@ -1762,6 +1762,11 @@ var toys={
 				getValue:function(w,k) {
 					return this.w[w][k];
 				},
+
+
+				getValueByFrame:function(w,k) {
+					return this.w[w].frames[this.w[w][k]];
+				},
 				
 				/**
 				* 
