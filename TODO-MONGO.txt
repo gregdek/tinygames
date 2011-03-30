@@ -1,14 +1,18 @@
 TODO:
+* Add a power up!  Some of these levels are hard!
 * build out a full quest for the factor game!
   + finish quest
 * Q3: Figure out how to ditch "quest clear" message after oldman talks
 * general: change NPC text for Village
 * general: put "=" into the font (appears to be missing)
 * general: Set main NPC text to know which quests are complete/incomplete at start of level
+* incorporate YouTube video example
+  + Sal Khan's prime factors video (http://www.youtube.com/watch?v=ZKKDTfHcsG0&NR=1&feature=fvwp)
+  + Modal popups: http://akihabara.avocaweb.net/viewtopic.php?f=6&t=22&sid=56c23deaef4a161201f2f67263aac95d
 * gregcave: Set health to decline after wrong guess?
 * general: illustrate how to change what NPC can say in the middle of a level
 * customize monster class to display different enemy sprite depending on health?  or no?
-* Get common core math skill listing into the git repo as a separate "TODO"
+* troubleshoot Chrome issues
 
 IDEAS:
 
@@ -24,6 +28,7 @@ IDEAS:
   and have tile answer choices created
 
 DONE!
+* Got common core math skill listing into the git repo as a separate "TODO"
 * Fixed tricky bug re: calling weapons in HUD by id (wrong) instead of reference (right)
 * Q3: set it so the key is only given once and the doors stay opened once open
 * keys figured out

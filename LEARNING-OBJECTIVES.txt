@@ -1,0 +1,359 @@
+For reference, a list of all learning objectives through 4th grade, as listed in the Common Core Standards.
+For more: http://www.corestandards.org/the-standards/mathematics
+
+Kindergarten, Counting and Cardinality.
+
+Know number names and the count sequence.
+
+    * K.CC.1 Count to 100 by ones and tens.
+    * K.CC.2 Count forward beginning from a given number within the known sequence (instead of having to begin at 1).
+    * K.CC.3 Write numbers from 0 to 20. Represent a number of objects with a written numeral 0-20 (with 0 representing a count of no objects). 
+
+Count to tell the number of objects.
+
+    * K.CC.4 Understand the relationship between numbers and quantities; connect counting to cardinality.
+    * K.CC.4a When counting objects, say the number names in the standard order, pairing each object with one and only one number name and each number name with one and only one object.
+    * K.CC.4b Understand that the last number name said tells the number of objects counted. The number of objects is the same regardless of their arrangement or the order in which they were counted.
+    * K.CC.4c Understand that each successive number name refers to a quantity that is one larger.
+    * K.CC.5 Count to answer "how many?" questions about as many as 20 things arranged in a line, a rectangular array, or a circle, or as many as 10 things in a scattered configuration; given a number from 1-20, count out that many objects. 
+
+Compare numbers.
+
+    * K.CC.6 Identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in another group; e.g., by using matching and counting strategies.
+    * K.CC.7 Compare two numbers between 1 and 10 presented as written numerals. 
+
+Kindergarten: Operations and Algebraic Thinking.
+
+Understand addition as putting together and adding to, and understand subtraction as taking apart and away from.
+
+    * K.OA.1 Represent addition and subtraction with objects, fingers, mental images, drawings, sounds (e.g. claps), acting out situations, verbal explanations, expressions, or equations.
+    * K.OA.2 Solve addition and subtraction word problems, and add and subtract within 10, e.g., by using objects or drawings to represent the problem.
+    * K.OA.3 Decompose numbers less than or equal to 10 into pairs in more than one way, e.g., by using objects or drawings, and record each decomposition by a drawing or equation (e.g., 5 = 2 + 3 and 5 = 4 + 1).
+    * K.OA.4 For any number from 1 to 9, find the number than makes 10 when added to the given number, e.g., by using objects or drawings, and record the answer with a drawing or equation.
+    * K.OA.5 Fluently add and subtract within 5. 
+
+Kindergarten: Number and Operations in Base Ten.
+
+Work with numbers 11-19 to gain foundations for place value.
+
+    * K.NBT.1 Compose and decompose numbers from 11 to 19 into ten ones and some further ones, e.g., by using objects or drawings, and record each composition by a drawing or equation (e.g. 18 = 10 + 8); understand that these numbers are composed of ten ones and one, two, three, four, five, six, seven, eight or nine ones. 
+
+Kindergarten: Measurement and Data.
+
+Describe and compare measurable attributes.
+
+    * K.MD.1 Describe and measure attributes of objects, such as length or weight. Describe several measurable attributes of a single object.
+    * K.MD.2 Directly compare two objects with a measurable attribute in common, to see which object has "more of"/"less of" the attribute, and describe the difference. For example, directly compare the heights of two children and describe one child as taller/shorter. 
+
+Classify objects and count the number of objects in each category.
+
+    * K.MD.3 Classify objects into given categories; count the numbers of objects in each category and sort the categories by count. 
+
+Kindergarten: Geometry.
+
+Identify and describe shapes (squares, circles, triangles, rectangles, hexagons, cubes, cones, cylinders, and spheres).
+
+    * K.G.1 Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.
+    * K.G.2 Correctly name shapes regardless of their orientations or overall size.
+    * K.G.3 Identify shapes as two-dimensional (lying in a plane, "flat") or three-dimensional ("solid"). 
+
+Analyze, compare, create, and compose shapes.
+
+    * K.G.4 Analyze and compare two- and three-dimensional shapes, in different sizes and orientations, using informal language to describe their similarities, differences, parts (e.g. number of sides and vertices/"corners") and other attributes (e.g., having sides of equal length).
+    * K.G.5 Model shapes in the world by building shapes from components (e.g., sticks and clay balls) and drawing shapes.
+    * K.G.6 Compose simple shapes to form larger shapes. For example, "can you join these two triangles with full sides touching to make a rectangle?" 
+
+Grade 1: Operations and Algebraic Thinking.
+
+Represent and solve problems involving addition and subtraction.
+
+    * 1.OA.1 Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.
+    * 1.OA.2 Solve word problems that call for addition of three whole numbers whose sum is less than or equal to 20, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem. 
+
+Understand and apply properties of operations and the relationship between addition and subtraction.
+
+    * 1.OA.3 Apply properties of operations as strategies to add and subtract. Examples: if 8+3=11 is known, then 3+8=11 is also known. (Commutative property of addition.) To add 2+6+4, the second two numbers can also be added to make a ten, so 2+6+4 = 2+10 = 12. (Associative property of addition.)
+    * 1.OA.4 Understand subtraction as an unknown-addend problem. For example, subtract 10-8 by finding the number that makes 10 when added to 8. 
+
+Add and subtract within 20.
+
+    * 1.OA.5 Relate counting to addition and subtraction (e.g., by counting on 2 to add 2.)
+    * 1.OA.6 Add and subtract within 20, demonstrating fluency for addition and subtraction within 10. Use strategies such as counting on; making ten (e.g., 8+6 = 8+2+4 = 10+4 = 14); decomposing a number leading to a ten (e.g., 13-4 = 13-3-1 = 10-1 = 9); using the relationship between addition and subtraction (e.g., knowing that 8+4 = 12, one knows 12-8 = 4); and creating equivalent but easier known sums (e.g., adding 6+7 by creating the known equivalent 6+6+1 = 12+1 = 13). 
+
+Work with addition and subtraction equations.
+
+    * 1.OA.7 Understand the meaning of the equal sign, and determine if equations involving addition and subtraction are true or false. For example, which of the following equations are true and which are false? 6 = 6, 7 = 8-1. 5+2 = 2+5, 4+1 = 5+2.
+    * 1.OA.8 Determine the unknown whole number in an addition or subtraction equation relating three whole numbers. For example, determine the unknown number that makes the equation true in each of the equations 8+?=11, 5=?-3. 6+6=?. 
+
+Grade 1: Number and Operations in Base Ten.
+
+Extend the counting sequence.
+
+    * 1.NBT.1 Count to 120, starting at any number less than 120. In this range, read and write numerals and represent a number of object with a written numeral. 
+
+Understand place value.
+
+    * 1.NBT.2 Understand that the two digits of a two-digit number represent amounts of tens and ones. Understand the following as special cases:
+    * 1.NBT.2a 10 can be thought of as a bundle of ones -- called a "ten."
+    * 1.NBT.2b The numbers from 11 to 19 are composed of a ten and a one, two, three, four, five, six, seven, eight, or nine ones.
+    * 1.NBT.2c The numbers 10, 20, 30, 40, 50, 60, 70, 80, 90 refer to one, two, three, four, five, six, seven, eight, or nine tens (and 0 ones).
+    * 1.NBT.3 Compare two two-digit numbers based on meanings of the tens and ones digits, recording the results of comparisons with the symbols < &eq;, and &rt;. 
+
+Use place value understanding and properties of operations to add and subtract.
+
+    * 1.NBT.4 Add within 100, including adding a two-digit number and a one-digit number, and adding a two-digit number and a multiple of 10, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used. Understand that in adding two-digit numbers, one adds tens, ones and ones; and sometimes it is necessary to compose a ten.
+    * 1.NBT.5 Given a two-digit number, mentally find 10 more or 10 less than the number, without having to count; explain the reasoning used.
+    * 1.NBT.6 Subtract multiples of 10 in the range 10-90 from multiples of 10 in the range 10-90 (positive or zero differences), using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used. 
+
+Grade 1: Measurement and Data.
+
+Measure lengths indirectly and by iterating length units.
+
+    * 1.MD.1 Order three objects by length; compare the lengths of two objects indirectly by using a third object.
+    * 1.MD.2 Express the length of an object as a whole number of length units, by laying multiple copies of a shorter object (the length unit) end to end; understand that the length measurement of an object is the number of same-size length units that span it with no gaps or overlaps. Limit to contexts where the object being measures is spanned by a whole number of length units with no gaps or overlaps. 
+
+Tell and write time.
+
+    * 1.MD.3 Tell and write time in hours and half-hours using analog and digital clocks. 
+
+Represent and interpret data.
+
+    * 1.MD.4 Organize, represent, and interpret data with up to three categories; ask and answer questions about the total number of data points, how many in each category, and how many more or less are in one category than in another. 
+
+Grade 1: Geometry
+
+Reason with shapes and their attributes.
+
+    * 1.G.1 Distinguish between defining attributes (e.g. triangles are closed and three-sided) versus non-defining attributes (e.g. color, orientation, overall size); build and draw shapes to possess defining atributes.
+    * 1.G.2 Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape.
+    * 1.G.3 Partition circles and rectangles into two and four equal shares, describe the shares using the words halves, fourths, and quarters, and use the phrases half of, fourth of, and quarter of. Describe the whole as two of, or four of the shares. Understand for these examples that decomposing into more equal shares creates smaller shares. 
+
+Grade 2: Operations and Algebraic Thinking
+
+Represent and solve problems involving addition and subtraction.
+
+    * 2.OA.1 Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem. 
+
+Add and subtract within 20.
+
+    * 2.OA.2 Fluently add and subtract within 20 using mental strategies. By end of Grade 2, know from memory all sums of two one-digit numbers. 
+
+Work with equal groups of objects to gain foundations for multiplication.
+
+    * 2.OA.3 Determine whether a group of objects (up to 20) has an odd or even number of members; e.g., by pairing objects or counting them by 2s; write an equation to express an even number as a sum of two equal addends. 
+
+    * 2.OA.4 Use addition to find the total number of objects arranged in rectangular arrays with up to 5 rows and up to 5 columns; write an equation to express the total as a sum of equal addends. 
+
+Grade 2: Number and Operators in Base Ten.
+
+Understand place value.
+
+    * 2.NBT.1 Understand that the three digits of a three-digit number represent amounts of hundreds, tens, and ones; e.g., 706 equals 7 hundreds, 0 tens, and 6 ones. Understand the following as special cases:
+    * 2.NBT.1a 100 can be thought of as a bundle of ten tens -- called a "hundred".
+    * 2.NBT.1b The numbers 100, 200, 300, 400, 500, 600, 700, 800, 900 refer to one, two, three, four, five, six, seven, eight, or nine hundreds (and 0 tens and 0 ones).
+    * 2.NBT.2 Count within 1000; skip-count by 5s, 10s, and 100s.
+    * 2.NBT.3 Read and write numbers to 1000 using base-ten numerals, number names, and expanded form.
+    * 2.NBT.4 Compare two three-digit numbers based on meanings of the hundreds, tens, and ones digits, using >, = and < symbols to record the results of comparisons. 
+
+Use place value understanding and properties of operations to add and subtract.
+
+    * 2.NBT.5 Fluently add and subtract within 100 using strategies based on place value, properties of operations, and/or the relationship between addition and subtraction.
+    * 2.NBT.6 Add up to four two-digit numbers using strategies based on place value and properties of operations.
+    * 2.NBT.7 Add and subtract within 1000, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method. Understand that in adding or subtracting three-digit numbers, one adds or subtracts hundreds and hundreds, tens and tens, ones and ones; and sometimes it is necessary to compose or decompose tens or hundreds.
+    * 2.NBT.8 Mentally add 10 or 100 to a given number 100-900, and mentally subtract 10 or 100 from a given number 100-900.
+    * 2.NBT.9 Explain why addition and subtraction strategies work, using place value and the properties of operations. 
+
+Grade 2: Measurement and Data.
+
+Measure and estimate lengths in standard units.
+
+    * 2.MD.1 Measure the length of an object by selecting and using appropriate tools such as rulers, yardsticks, meter sticks, and measuring tapes.
+    * 2.MD.2 Measure the length of an object twice, using length units of different lengths for the two measurements; describe how the two measurements relate to the size of the unit chosen.
+    * 2.MD.3 Estimate lengths using units of inches, feet, centimeters, and meters.
+    * 2.MD.4 Measure to determine how much longer one object is than another, expressing the length difference in terms of a standard length unit. 
+
+Relative addition and subtraction to length.
+
+    * 2.MD.5 Use addition and subtraction within 100 to solve word problems involving lengths that are given in the same units, e.g., by using drawings (such as drawings of rulers) and equations with a symbol for the unknown number to represent the problem.
+    * 2.MD.6 Represent whole numbers as lengths from 0 on a number line diagram with equally spaced points corresponding to the numbers 0, 1, 2, ..., and represent whole-number sums and differences within 100 on a number line diagram. 
+
+Work with time and money.
+
+    * 2.MD.7 Tell and write time from analog and digital clocks to the nearest five minutes, using a.m. and p.m.
+    * 2.MD.8 Solve word problems involving dollar bills, quarters, dimes, nickels, and pennies, using dollars and cents symbols appropriately. Example: If you have 2 dimes and 3 pennies, how many cents do you have? 
+
+Represent and interpret data.
+
+    * 2.MD.9 Generate measurement data by measuring lengths of several objects to the nearest whole unit, or by making repeated measurements of the same object. Show the measurements by making a line plot, where the horizontal scale is marked off in whole-number units.
+    * 2.MD.10 Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put-together, take-apart, and compare problems using information presented in a bar graph. 
+
+Grade 2: Geometry.
+
+Reason with shapes and their attributes.
+
+    * 2.G.1 Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces. Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.
+    * 2.G.2 Partition a rectangle into rows and columns of same-sized squares and count to find the total number of them.
+    * 2.G.3 Partition circles and rectangles into two, three, or four equal shares, describe the shares using the words halves, thirds, half of, a third of, etc., and describe the whole as two halves, three thirds, four fourths. Recognize that equal shares of identical wholes need not have the same shape. 
+
+
+Grade 3: Operations and Algebraic Thinking.
+
+Represent nd solve problems involving multiplication and division.
+
+    * 3.OA.1 Interpret products of whole numbers, e.g., interpret 5x7 as the total number of objects in 5 groups of 7 objects each. For example, describe a context in which a total number of objects can be expressed as 5x7.
+    * 3.OA.2 Interpret whole-number quotients of whole numbers, e.g., interpret 56/8 as the number of objects in each share when 56 objects are partitioned equally into 8 shares, or as a number of shares when 56 objects are partitioned into equal shares of 8 objects each. For example, describe a context in which a number of shares or a number of groups can be expressed as 56/8.
+    * 3.OA.3 Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem.
+    * 3.OA.4 Determine the unknown whole number in a multiplication or division equation relating three whole numbers. For exmaple, determine the unknown number that makes the equation true in each of the equations 8x?=48, 5=?/3, 6x6=?. 
+
+Understand properties of multiplication and the relationship between multiplication and division.
+
+    * 3.OA.5 Apply properties of operations as strategies to multiply and divide. Examples: If 6x4=24 is known, then 4x6=24 is also known. (Commutative property of multiplication.) 3x5x2 can be found by 3x5=15, then 15x2=30, or by 5x2=10, then 3x10=30. (Associative property of multiplication.) Knowing that 8x5=40 and 8x2=16, one can find 8x7 as 8x(5+2)=(8x5)+(8x2)=40+16=56. (Distributive property.)
+    * 3.OA.6 Understand division as an unknown-factor problem. For example, find 32/8 by finding the number that makes 32 when multiplied by 8. 
+
+Multiply and divide within 100.
+
+    * 3.OA.7 Fluently multiply and divide within 100, using strategies such as the relationship between multiplication and division (e.g., knowing that 8x5=40, one knows 40/5=8) or properties of operations. By the end of Grade 3, know from memory all products of two one-digit numbers. 
+
+Solve problems involving the four operations, and identify and explain patterns in arithmetic.
+
+    * 3.OA.8 Solve two-step word problems using the four operations. Represent these problems using equations with a letter standing for the unknown quantity. Assess the reasonableness of answers using mental computation and estimation strategies including rounding. 
+
+    * 3.OA.9 Identify arithmetic patterns (including patterns in the addition table or multiplication table), and explain them using properties of operations. For example, observe that 4 times a number is always even, and explain why 4 times a number can be decomposed into two equal addends. 
+
+Grade 3: Number and Operations in Base Ten.
+
+Use place value understanding and properties of operations to perform multi-digit arithmetic.
+
+    * 3.NBT.1 Use place value understanding to round whole numbers to the nearest 10 or 100.
+    * 3.NBT.2 Fluently ass and subtract within 1000 using strategies and algorithms based on place value, properties of operations, and/or the relationship between addition and subtraction.
+    * 3.NBT.3 Multiply one-digit whole numbers by multiples of 10 in the range 10-90 (e.g. 9x80, 5x60) using strategies based on place value and properties of operations. 
+
+Grade 3: Number and Operations -- Fractions
+
+Develop understanding of fractions as numbers.
+
+    * 3.NF.1 Understand a fraction of 1/b as the quantity formed by 1 part when a whole is partitioned into b equal parts; understand a fraction a/b as the quantity of a parts of size 1/b.
+    * 3.NF.2 Understand a fraction as a number on the number line; represent fractions on a number line diagram.
+    * 3.NF.2a Represent a fraction 1/b on a number line diagram by defining the interval from 0 to 1 as the whole and partitioning it into b equal parts. Recognize that each part has size 1/b and that the endpoint of the part based at 0 locates the number 1/b on the number line.
+    * 3.NF.2b Represent a fraction a/b on a number line diagram by marking off a lengths 1/b from 0. Recognize that the resulting interval has size a/b and that its endpoint locates the number a/b on the number line.
+    * 3.NF.3 Explain equivalence of fractions in special cases, and compare fractions by reasoning about their size.
+    * 3.NF.3a Understand two fractions as equivalent (equal) if they are the same size, or the same point on a number line.
+    * 3.NF.3b Recognize and generate simple equivalent fractions, e.g., 1/2=2/4, 4/6=2/3). Explain why the fractions are equivalent, e.g., by using a visual fraction model.
+    * 3.NF.3c Express whole numbers as fractions, and recognize fractions that are equivalent to whole numbers. Examples: Express 3 in the form 3=3/1; recognize that 6/1=6; locate 4/4 and 1 at the same point of a number line diagram.
+    * 3.NF.3d Compare two fractions with the same numerator or the same denominator by reasoning about their size. Recognize that comparisons are valid only when the two fractions refer to the same whole. Record the results of comparisons with the symbols <, &eq;, or >, and justify the conclusions, e.g., by using a visual fraction model. 
+
+Grade 3: Measurement and Data.
+
+Solve problems involving measurement and estimation of intervals of time, liquid volumes, and masses of objects.
+
+    * 3.MD.1 Tell and write time to the nearest minute and measure time intervals in minutes. Solve word problems involving addition and subtraction of time intervals in minutes, e.g., by representing the problem on a number line diagram.
+    * 3.MD.2 Measure and estimate liquid volumes and masses of objects using standard units of grams (g), kilograms (kg), and liters (l). Add, subtract, multiply, or divide to solve one-step word problems involving masses or volumes that are given in the same units, e.g., by using drawing (such as a beaker with a measurement scale) to represent the problem. 
+
+Represent and interpret data.
+
+    * 3.MD.3 Draw a scaled picture graph and a scaled bar graph to represent a data set with several categories. Solve one- and two-step "how many more" and "how many less" problems using information presented in scaled bar graphs. For example, draw a bar graph in which each square in the bar graph might represent 5 pets.
+    * 3.MD.4 Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units -- whole numbers, halves, or quarters. 
+
+Geometric measurement: understand concepts of area and relate area to multiplication and to addition.
+
+    * 3.MD.5 Recognize area as an attribute of plane figures and understand concepts of area measurement.
+    * 3.MD.5a A square with side length 1 unit, called a "unit square", is said to have "one square unit" of area, and can be used to measure area.
+    * 3.MD.5b A place figure which can be covered without gaps or overlays by n unit squares is said to have an area of n square units.
+    * 3.MD.6 Measure areas by counting unit squares (square cm, square m, square in, square ft, and improvised units).
+    * 3.MD.7 Relate area to the operations of multiplication and addition.
+    * 3.MD.7a Find the area of a rectangle with whole-number lengths by tiling it, and show that the area is the same as would be found by multiplying the side lengths.
+    * 3.MD.7b Multiply side lengths to find areas of rectangles with whole-number side lengths in the context of solving real world and mathematicl problems, and represent whole-number products as rectangular areas in mathematical reasoning.
+    * 3.MD.7c Use tiling to show in a concrete case that the area of a rectangle with whole-number side lengths a and b+c is the sum of axb and axc. Use area models to represent the distributive propery in mathematical reasoning.
+    * 3.MD.7d Recognize area as additive. Find areas of rectilinear figures by decomposing them into non-overlapping rectangles and adding the areas of non-overlapping parts, applying this technique to solve real world problems. 
+
+Geometric measurement: recognize perimeter as an attribute of plane figures and distinguish between linear and area measures.
+
+    * 3.MD.8 Solve real world and mathematical problems involving perimeters of polygons, including finding the perimeter given the side lengths, finding an unknown side length, and exhibiting rectangles with the same perimeter and different areas or with the same area and different perimeters. 
+
+Grade 3: Geometry.
+
+Reason with shapes and their attributes.
+
+    * 3.G.1 Understand that shapes in different categories (e.g. rhombuses, rectangles, and others) may share attributes (e.g. having four sides), and that the shared attributes can define a larger category (e.g., quadrilaterals). Recognize rhombuses, rectangles, and squares as examples of quadrilaterals, and draw examples of quadrilaterals that do not belong to any of these subcategories.
+    * 3.G.2 Partition shapes into parts with equal areas. Express the area of each part as a unit fraction of the whole. For example, partition a shape into 4 parts with equal area, and describe the area of each part as 1/4 of the area of the shape. 
+
+Grade 4: Operations and Algebraic Thinking.
+
+Use the four operations with whole numbers to solve problems.
+
+    * 4.OA.1 Interpret a multiplication equation as a comparison, e.g., interpret 35=5x7 as a statement that 35 is 5 times as many as 7 and 7 times as many as 5. Represent verbal statements of multiplicative comparisons as multiplication equations.
+    * 4.OA.2 Multiply or divide to solve word problems involving multiplicative comparison, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem, distinguishing multiplicative comparison from additive comparison.
+    * 4.OA.3 Solve multi-step word problems posed with whole numbers and having whole-number answers using the four operations, including problems in which remainders must be interpreted. Represent these problems using equations with a letter standing for the unknown quantity. Assess the reasonableness of answers using mental computation and estimation strategies including rounding. 
+
+Gain familiarity with factors and multiples.
+
+    * 4.OA.4 Find all factor pairs for a whole number in the range 1-100. recognize that a whole number is a multiple of each of its factors. Determine whether a given whole number in the range 1-100 is a multiple of a given one-digit number. Determine whether a given whole number in the range 1-100 is prime or composite. 
+
+Generate and analyze patterns.
+
+    * 4.OA.5 Generate a number or shape pattern that follows a given rule. Identify apparent features of the pattern that were not explicit in the rule itself. For example, given the rule "Add 3" and the starting number 1, generate terms in the resulting sequence and observe that the terms appear to alternate between odd and even numbers. Explain informally why the numbers will continue to alternate this way. 
+
+Grade 4: Number and Operations in Base Ten.
+
+    * 4.NBT.1 Recognize that in a multi-digit whole number, a digit in one place represents ten times what it represents in the place to its right. For example, recognize that 700/70=10 by applying concepts of place value and division.
+    * 4.NBT.2 Read and write multi-digit whole numbers using base-ten numerals, number names, and expanded form. Compare two multi-digit numbers based on meaning of the digits in each place, using <, &eq;, &rt; symbols to record the results of comparisons.
+    * 4.NBT.3 Use place value understanding to round multi-digit whole numbers to any place. 
+
+Use place value understanding and properties of operations to perform multi-digit arithmetic.
+
+    * 4.NBT.4 Fluently add and subtract multi-digit whole numbers using the standard algorithm.
+    * 4.NBT.5 Multiply a whole number of up to four digits by a one-digit whole number, and multiply two two-digit numbers, using strategies based on place value and the properties of operations, illustrate and explain the calculation by using equations, rectangular arrays, and/or area models.
+    * 4.NBT.6 Find whole-number quotients and remainders with up to four-digit dividends and one-digit divisors, using strategies based on place value, the properties of operators, and/or the relationship between multiplication and division. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models. 
+
+Grade 4. Number and Operations -- Fractions.
+
+extend understanding of fraction equivalence and ordering.
+
+    * 4.NF.1 Explain why a fraction a/b is equivalent to a fraction (n x a)/(n x b) by using visual fraction models, with attention to how the number and size of the parts differ even though the two fractions themselves are the same size. Use this principle to recognize and generate equivalent fractions.
+    * 4.NF.2 Compare two fractions with different numerators and different denominators, or by comparing to a benchmark fraction such as 1/2. Recognize that comparisons are valid only when the two fractions refer to the same whole. Record the results of comparisons with symbols >, &eq;, or <, and justify the conclusions, e.g., by using a visual fraction model. 
+
+Build fractions from unit fractions by applying and extending previous understandings of operations on whole numbers.
+
+    * 4.NF.3 Understand a fraction a/b with a>1 as a sum of fractions 1/b.
+    * 4.NF.3a Understand addition and subtraction of fractions as joining and separating parts referring to the same whole.
+    * 4.NF.3b Decompose a fraction into a sum of fractions with the same denominator in more than one way, recording each decomposition by an equation. Justify decompressions, e.g., by using a visual fraction model. Examples: 3/8 = 1/8 + 1/8 + 1/8; 3/8 = 1/8 + 2/8; 2 1/8 = 1 + 1+ 1/8 = 8/8 + 8/8 + 1/8.
+    * 4.NF.3c Add and subtract mixed numbers with like denominators, e.g., by replacing each mixed number with an equivalent fraction, and/or by using properties of operations and the relationship between addition and subtraction.
+    * 4.NF.3d Solve word problems involving addition and subtraction of fractions referring to the same whole and having like denominators, e.g., by using visual fraction models and equations to represent the problem.
+    * 4.NF.4 Apply and extend previous understandings of multiplication to multiply a fraction by a whole number.
+    * 4.NF.4a Understand a fraction a/b as a multiple of 1/b. For example, use a visual fraction model to represent 5/4 as the product 5 x 1/4, recording the conclusion by the equation 5/4 = 5 x (1/4).
+    * 4.NF.4b Understand a multiple of a/b as a multiple of 1/b, and use this understanding to multiply a fraction by a whole number. For example, use a visual fraction model to express 3 x (2/5) as 6 x (1/5), recognizing this product as 6/5. (In general, n x (a/b) = (n x a)/b.)
+    * 4.NF.4c Solve word problems involving multiplication of a fraction by a whole number, e.g., by using visual fraction models and equations to represent the problem. For example, if each person at a party will eat 3/8 of a pound of roast beef, and there will be 5 people at the party, how many pounds of roast beef will be needed? Between what two whole numbers does your answer lie? 
+
+Understand decimal notation for fractions, and compare decimal fractions.
+
+    * 4.NF.5 Express a fraction with denominator 10 as an equivalent fraction with denominator 100, and use this technique to add two fractions with respective denominators 10 and 100. For example, express 3/10 as 30/100, and add 3/10 + 4/100 = 34/100.
+    * 4.NF.6 Use decimal notation for fractions with denominators 10 or 100. For exmaple, rewrite 0.62 as 62/100; describe a length as 0.62 meters; locate 0.62 on a number line as a diagram.
+    * 4.NF.7 Compare two decimals to hundredths by reasoning about their size. Recognize that comparisons are valid only when the two decimals refer to the same whole. Record the results of comparisons with the symbols <, &eq;, and %gt;, and justify the conclusions, e.g., by using a visual model. 
+
+Grade 4. Measurement and Data.
+
+Solve problems involving measurement and conversion of measurements from a larger unit to a smaller unit.
+
+    * 4.MD.1 Know relative sizes of measurement units within one system of units including km, m, cm; kg, g; lb, oz; l, ml; hr, min, sec. Within a single system of measurement, express measurements in a larger unit in terms of a smaller unit. Record measurement equivalents in a two-column table. For example, know that 1 ft is 12 times as long as 1 in. Express the length of a 4 ft snake as 48 in. Generate a conversion table for feet and inches listing the number pairs (1, 12), (2, 24), (3, 36), ...
+    * 4.MD.2 Use the four operations to solve word problems involving distances, intervals of time, liquid volumes, masses of objects, and money, including problems involving simple fractions or decimals, and problems that require expressing measurements given in a larger unit in terms of a smaller unit. Represent measurement quantities using diagrams such as number line diagrams that feature a measurement scale.
+    * 4.MD.3 Apply the area and perimeter formulas for rectangles in real world and mathermatical problems. For exmaple, find the width of a rectangluar room given the area of the flooring and the length, by viewing the area formula as a multiplication equation with an unknown factor. 
+
+Represent and interpret data.
+
+    * 4.MD.4 Make a line plot to display a data set of measurements in fractions of a unit (1/2, 1/4, 1/8). Solve problems involving addition and subtraction of fractions by using information presented in line plots. For example, from a line plot find and interpret the difference in length between the longest and shortest specimens in an insect collection. 
+
+Geometric measurement: understand concepts of angle and measure angles.
+
+    * 4.MD.5 Recognize angles as geometric shapes that are formed wherever two rays share a common endpoint, and understand concepts of angle measurement:
+    * 4.MD.5a An angle is measure with reference to a circle with its center at the common endpoint of the rays, by considering the fraction of the circular arc between the points where the two rays intersect the circle. An angle that turns through 1/360 of a circle is called a "one-degree angle," and can be used to measure angles.
+    * 4.MD.5b An angle that turns through n one-degree angles is said to have an angle measure of n degrees.
+    * 4.MD.6 Measure angles in whole-number degrees using a protractor. Sketch angles of specified measure.
+    * 4.MD.7 Recognize angle measure as additive. When an angle is decomposed into non-overlapping parts, the angle measure of the whole is the sum of the angle measures of the parts. Solve addition and subtraction problems to find unknown angles on a diagram in real world and mathematical problems, e.g., by using an equation with a symbol for the unknown angle measure. 
+
+Grade 4: Geometry.
+
+Draw and identify lines and angles, and classify shapes by properties of their lines and angles.
+
+    * 4.G.1 Drave points, lines, segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify these in two-dimensional figures.
+    * 4.G.2 Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines, or the presence or absence of angles of a specified size. Recognize right triangles as a category, and identify right triangles.
+    * 4.G.3 Recognize a line of symmetry for a two-dimensional figure as a line across the figure such that the figure can be folded along the line into matching parts. Identify line-symmetric figures and draw lines of symmetry. 

@@ -1099,7 +1099,13 @@ var gbox={
   * image; // => <img src=?"logo.png?_brc=5-7-2010-15-48-42" src_org=?"logo.png" id=?"logo" wasloaded=?"true">?
   */
 	getImage:function(id){return this._images[id]},
-  
+ 
+  /**
+  * getVideo.  Words just like getImage.
+  */
+
+	getVideo:function(id){return this._videos[id]},
+ 
   /**
   * Gets the buffer canvas (automatically created by gbox.initScreen).
   * @returns {Object} A DOM Canvas element, including the width and height of the canvas.
@@ -1150,6 +1156,19 @@ var gbox={
   */
 	deleteImage:function(id) {
 		delete this._images[id];
+	},
+
+  /**
+  * Adds a video to the loader.  Modeled on addImage.  Will it work?  Good question.
+  */
+	
+	addVideo:function(id,filename) {
+		if (this._images[id])
+			if (this._videos[id].getAttribute("src_org")==filename)
+				return;
+			else
+				delete this._videos[id];
+		this._addtoloader({type:"video",id:id,filename:filename});
 	},
   
   /**
@@ -1271,7 +1290,16 @@ var gbox={
 		this._safedrawimage(tox,image,(data.x?data.x:0), (data.y?data.y:0),(data.w?data.w:data.dw),(data.h?data.h:data.dh),data.dx*(data.fliph?-1:1),data.dy*(data.flipv?-1:1),data.dw,data.dh);
 		tox.restore();
 	},
-  
+
+	blitVideo:function(tox,video,data) {
+		if (tox==null) return;
+		this._implicitsargs(data);
+		tox.save();
+		tox.globalAlpha=(data.alpha?data.alpha:1);
+		tox.translate((data.fliph?data.dw:0), (data.flipv?data.dh:0)); tox.scale((data.fliph?-1:1), (data.flipv?-1:1));
+		this._safedrawimage(tox,image,(data.x?data.x:0), (data.y?data.y:0),(data.w?data.w:data.dw),(data.h?data.h:data.dh),data.dx*(data.fliph?-1:1),data.dy*(data.flipv?-1:1),data.dw,data.dh);
+		tox.restore();
+	},
   
   /**
   * Draws a tilemap to a canvas context
@@ -1859,6 +1887,15 @@ var gbox={
 					gbox._images[current.id].setAttribute('src_org',current.filename);
 					gbox._images[current.id].setAttribute('id',current.id);
 					gbox._images[current.id].setAttribute('wasloaded',false);
+					break;
+				}
+				case "video":{
+					gbox._videos[current.id]=new Video();
+					gbox.addEventListener(gbox._videos[current.id],'load', gbox._loaderimageloaded);
+					gbox._videos[current.id].src=gbox._breakcacheurl(current.filename);
+					gbox._videos[current.id].setAttribute('src_org',current.filename);
+					gbox._videos[current.id].setAttribute('id',current.id);
+					gbox._videos[current.id].setAttribute('wasloaded',false);
 					break;
 				}
 				case "bundle":{

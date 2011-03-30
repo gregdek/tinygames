@@ -24,10 +24,10 @@
 					//  0    1    2    3    4    5    6    7    8    9   10
 					[  12,  12,  12,  12,  12,  12,  12,  12,  12,  12,  12 ], // 0
 					[  12,   6,   6,   6,   6,   6,   6,   6,   6,   6,  12 ], // 1
-					[  12,   6,  14,  14,  14,  14,  14,  14,  14,   6,  12 ], // 2
+					[  12,   6,  14,  14,  14,  14,  14,   6,  14,   6,  12 ], // 2
 					[  12,   6,  14,   6,   6,   6,   6,   6,  14,   6,  12 ], // 3
 					[  12,   6,  14,   6,  14,  14,  14,   6,  14,   6,  12 ], // 4
-					[  12,   6,  14,   6,  14,   6,  14,   6,  14,   6,  12 ], // 5
+					[  12,   6,  14,   6,   6,   6,  14,   6,  14,   6,  12 ], // 5
 					[  12,   6,  14,   6,  14,  14,  14,   6,  14,   6,  12 ], // 6
 					[  12,   6,  14,   6,   6,   6,   6,   6,  14,   6,  12 ], // 7
 					[  12,   6,  14,  14,  14,  14,  14,  14,  14,   6,  12 ], // 8
@@ -44,18 +44,16 @@
 					// Params: 
 					//   id, type, x, y, health, speed
 
-					// maingame.addEnemy("gregdek-3-001-enemy1","octo",2,2,(2*2),2);
-					// maingame.addEnemy("gregdek-3-001-enemy2","octo",6,2,(2*2*2),2);
-					// maingame.addEnemy("gregdek-3-001-enemy3","octo",2,6,(2*2*2),2);
-					// maingame.addEnemy("gregdek-3-001-enemy4","octo",6,6,(2*2*3),2);
+					maingame.addEnemy("gregdek-3-003-enemy1","octo",3,3,(2*2*2*2),2);
+					maingame.addEnemy("gregdek-3-003-enemy2","octo",3,7,(3*3*3*3),3);
+					maingame.addEnemy("gregdek-3-003-enemy3","octo",7,3,(3*3*2*2),3);
+					maingame.addEnemy("gregdek-3-003-enemy4","octo",7,7,(2*2*2*2),2);
 
-					// Now let's add the 1x arrows.  Good for identifying monsters
-					// at long range.
-					// Params:
-					//   x, y, type, id, expire (if any)
+					// Now let's add the 3x sword.  It will be impossible to get
+					// the 3x sword without getting around some 3x monsters.
 
 					if (!tilemaps.queststatus["sword3x"]) {
-						maingame.addBonus((5*30),(5*30),"sword","sword3x",0);
+						maingame.addBonus((5*30)+5,(5*30)+5,"sword","sword3x",0);
 					}
 				 },
 				 mapActions:function() {
