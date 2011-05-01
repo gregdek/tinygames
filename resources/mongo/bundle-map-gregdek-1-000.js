@@ -90,6 +90,7 @@
 
 				// Define all objects added to the map.
 				addObjects:function() {
+
 					// add the wife.
                                         maingame.addNpc(80,80,[6],"wife",null,[6,7]);
 
@@ -109,7 +110,6 @@
 						// user hasn't completed gregdek-1-000, add the trigger.
 						maingame.setTileInMap(12,7,202,true);
 					}
-
 				},
 
 				// Define all actions triggered by the map.
@@ -127,7 +127,29 @@
 					}
 
 					// On stairs?  Go to the next level.
-                                        if (ontile==203) { maingame.gotoLevel({level:"gregdek-1-001",x:90,y:90,introdialogue:true,label:"Dungeon Level 1: Land of the Odd"}); }
+					// Or, you know, pop up a video.
+					// <iframe title="YouTube video player" width="560" height="349" src="http://www.youtube.com/embed/y4C81qAa3pY?rel=0" 
+					// frameborder="0" allowfullscreen></iframe>
+					if ((ontile==203) && (!tilemaps.queststatus["gregdek-1-000-video"])) {
+						tilemaps.queststatus["gregdek-1-000-video"] = true;
+						maingame.modalVideo("gregdek-1-000-video");
+						//gbox.getObject("player","player").doPause(true);
+						//winparams = 
+						//	'width=50,height=50,left=300,top=300,' +
+						//	'toolbar=no,location=no,directories=no,status=no,' +
+						//	'menubar=no,scrollbars=no,resizable=no';
+						//win = window.open('/','newwindow',winparams);
+						//var timer, win;
+						//function polling(){
+						//	if (win && win.closed) {
+						//		clearInterval(timer);
+						//		alert('popup window is closed.');
+						//	}
+						//}
+						//timer = setInterval('polling()',100);
+						//gbox.getObject("player","player").doPause(false);
+					}
+                                        // if (ontile==203) { maingame.gotoLevel({level:"gregdek-1-001",x:90,y:90,introdialogue:true,label:"Dungeon Level 1: Land of the Odd"}); }
 
 					// On trigger?  Create the stairs.
 

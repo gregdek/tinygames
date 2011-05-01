@@ -108,7 +108,36 @@ var toys={
 		* </ul>
 		*/
 		initialize:function(th,data) {
-			help.mergeWithModel(
+			// Video is different from regular tilesets, but close enough that we want to reuse
+			// most of the concepts.
+			if (th.isVideo) { alert("video"); help.mergeWithModel(
+				th,	
+				help.mergeWithModel(
+					data,
+					{
+						x:0, y:0,
+						z:0,
+						accx:0, accy:0, accz:0,
+						frames:{},
+						shadow:null,
+						maxacc:4, controlmaxacc:4,
+						responsive:0, // Responsiveness
+						weapon:0, // Weapon
+						camera:true,
+						flipv:false, fliph:false,
+						facing:toys.FACE_DOWN,
+						flipside:true,
+						haspushing:false,
+						frame:0,
+						colx:0,
+						coly:0,
+						staticspeed:0,
+						nodiagonals:false,
+						noreset:false
+					}
+				)
+			);}
+			else {help.mergeWithModel(
 				th,
 				help.mergeWithModel(
 					data,
@@ -135,7 +164,7 @@ var toys={
 						noreset:false
 					}
 				)
-			);
+			);}
 			if (th.coly==null) th.coly=gbox.getTiles(th.tileset).tileh-th.colh;
 			th.colhh=Math.floor(th.colh/2);
 			th.colhw=Math.floor(th.colw/2);

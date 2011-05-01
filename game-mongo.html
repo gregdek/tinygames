@@ -7,16 +7,53 @@
 	<script type="text/javascript" src="akihabara/help.js"></script>
 	<script type="text/javascript" src="akihabara/tool.js"></script>
 	<script type="text/javascript" src="akihabara/gamecycle.js"></script>
+	<script type="text/javascript" src="../externals/js/jquery.js"></script>
 	<style>BODY { -webkit-user-select:none; margin:0px}</style>
+	<style>
+		#mask { position:absolute; z-index:9000; background-color:#000; display:none; }
+		#boxes .window { position:absolute; width:440px; height:200px; display:none; z-index:9999; padding:20px; }
+		#boxes #dialog { width:375px; height:203px; }
+	</style>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 </head>
 <body>
+<!--a href="#dialog" name="modal">Simple Modal Window</a-->
+<div id="boxes">
+    <!-- #customize your modal window here -->
+    <div id="dialog" class="window">
+        <!--video src="/~gregdek/MONGO/akihabara/resources/mongo/test.ogv" height="300" width="200" controls>No video, sorry!</video-->
+        <video src="/~gregdek/MONGO/externals/prime-factors.ogv" height="300" width="200" controls>No video, sorry!</video>
+        <b>Testing of Modal Window</b> |
+        <!-- close button is defined as close class -->
+        <a href="#" class="close">Close it</a>
+    </div>
+    <!-- Do not remove div#mask, because you'll need it to fill the whole screen --> 
+    <div id="mask"></div>
+</div>
 </body>
 <script>
 // ---
 // Copyright (c) 2010 Francesco Cottone, http://www.kesiev.com/
 // ---
 
+// Jquery Video Popup Hack -- closing window
+
+$(document).ready(function() {
+
+    //if close button is clicked
+    $('.window .close').click(function (e) {
+        //Cancel the link behavior
+        e.preventDefault();
+        $('#mask, .window').hide();
+    });    
+     
+    //if mask is clicked
+    $('#mask').click(function () {
+        $(this).hide();
+        $('.window').hide();
+    });         
+
+});
 
 		  // Game-specific
 		  
@@ -80,6 +117,41 @@
 		  	}
 		  }
 		  	
+			// Display video.
+
+    maingame.modalVideo = function() {
+        //Cancel the link behavior
+        //e.preventDefault();
+        //Get the A tag
+        //var id = $(this).attr('href');
+	var id="#dialog";
+     
+        //Get the screen height and width
+        var maskHeight = $(document).height()-100;
+        var maskWidth = $(window).width()-100;
+     
+        //Set height and width to mask to fill up the whole screen
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+         
+        //transition effect    
+        $('#mask').fadeIn(1000);   
+        $('#mask').fadeTo("slow",0.8); 
+     
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+               
+        //Set the popup window to center
+        $(id).css('top',  winH/2-$(id).height()/2);
+        $(id).css('left', winW/2-$(id).width()/2);
+     
+        //transition effect
+        $(id).fadeIn(2000);
+     
+    //});
+    }
+
+
 		  	// Game events are decided by the map.
 		  	maingame.gameEvents=function() {
 		  		tilemaps.map.mapActions();
@@ -143,7 +215,7 @@
 					queststatus:{} // Every step the player does, is marked here (opened doors, sections cleared etc)
 				};
 			
-				 gbox.addObject({
+				gbox.addObject({
 					id:"bg",
 					group:"background",
 					blit:function() {
@@ -457,6 +529,31 @@
 			  });
 			
 			};
+
+		// Add a video.  HIGHLY EXPERIMENTAL.  ;)
+		maingame.addVideo=function(x,y,id) {
+			gbox.addObject({
+				isVideo:1,	// To tell everyone "I'm a video, not a regular tile".
+				group:"bonus",
+				questid:id,
+				zindex:0,
+				x:x,
+				y:y,
+
+				initialize:function() {
+					toys.topview.initialize(this,{
+					});
+				},
+
+				blit:function() {
+					//if (gbox.objectIsVisible(this)) {
+						// var v=this.getVideo(id);
+						// gbox.blitImageToScreen(gbox._videos["test-video"]);
+						gbox.blitImageToScreen(gbox._images["test-video"]);
+					//}
+				}
+			});
+		}
 			
 		// Add a bonus item. It jumps a while and then disappear.
 		maingame.addBonus=function(x,y,type,id,expire) {
@@ -469,9 +566,8 @@
 					case "SMALLKEY": {frames={ standdown:{ speed:3, frames:[8,9] }  }; break } // Blinking small key
 					// case "BOSSKEY": {frames={ standdown:{ speed:3, frames:[10,11] }  }; break }
 				}
-				
-				
-				 gbox.addObject({
+
+				gbox.addObject({
 					group:"bonus",
 					questid:id,
 					tileset:"bonus",
@@ -1227,4 +1323,5 @@
 	}, false);
 
 	</script>
+
 </html>

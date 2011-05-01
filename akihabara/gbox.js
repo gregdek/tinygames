@@ -1070,11 +1070,11 @@ var gbox={
   * @example
   * gbox.swapCanvas('canvas1','canvas2');
   */    
-  swapCanvas:function(a,b) {
-  	var swp=this._canvas[a];
-  	this._canvas[a]=this._canvas[b];
-  	this._canvas[b]=swp;
-  },
+  	swapCanvas:function(a,b) {
+  		var swp=this._canvas[a];
+  		this._canvas[a]=this._canvas[b];
+  		this._canvas[b]=swp;
+  	},
   /**
   * Deletes a given canvas.
   * @param {String} id The id of the canvas to be deleted.
@@ -1297,7 +1297,7 @@ var gbox={
 		tox.save();
 		tox.globalAlpha=(data.alpha?data.alpha:1);
 		tox.translate((data.fliph?data.dw:0), (data.flipv?data.dh:0)); tox.scale((data.fliph?-1:1), (data.flipv?-1:1));
-		this._safedrawimage(tox,image,(data.x?data.x:0), (data.y?data.y:0),(data.w?data.w:data.dw),(data.h?data.h:data.dh),data.dx*(data.fliph?-1:1),data.dy*(data.flipv?-1:1),data.dw,data.dh);
+		this._safedrawimage(tox,video,(data.x?data.x:0), (data.y?data.y:0),(data.w?data.w:data.dw),(data.h?data.h:data.dh),data.dx*(data.fliph?-1:1),data.dy*(data.flipv?-1:1),data.dw,data.dh);
 		tox.restore();
 	},
   
@@ -1816,7 +1816,7 @@ var gbox={
 	
 	readBundleData:function(pack,call) {
 		// Local resources first
-		if (pack.setObject) for (var i=0;i<pack.setObject.length;i++) eval("("+pack.setObject[i].object+")")[pack.setObject[i].property]=pack.setObject[i].value;
+		if (pack.setObject) for (var i=0;i<pack.setObject.length;i++) eval("("+pack.setObject[i].object+")")[pack.setObject[i].property]=pack.setObject[i].value; 
 		if (pack.addFont) for (var i=0;i<pack.addFont.length;i++) gbox.addFont(pack.addFont[i]);
 		if (pack.addTiles) for (var i=0;i<pack.addTiles.length;i++) gbox.addTiles(pack.addTiles[i]);
 		// Remote resources for last
@@ -1851,6 +1851,9 @@ var gbox={
 		var rs=(typeof this.readyState != "undefined" ?this.readyState:gbox._xmlhttp.readyState);
 		var st=(typeof this.status != "undefined" ?this.status:gbox._xmlhttp.status);
 		var rt=(typeof this.responseText != "undefined" ?this.responseText:gbox._xmlhttp.responseText);
+		//alert ("rs=" + rs);
+		//alert ("st=" + st);
+		//alert ("rt=" + rt);
 		if(rs == 4 && (!st ||st == 200)) {
 			if (rt) {
 				if (!gbox._loaderqueue.getCurrent().call.skipCacheSave)
@@ -1861,7 +1864,8 @@ var gbox={
 				gbox._loaderloaded();
 			}	
 		}
-	},
+	}
+	,
 	
 	// Loader code
 	_addtoloader:function(d) { // type:xx, data:yy
@@ -1873,7 +1877,11 @@ var gbox={
 		setTimeout(gbox._loadnext,10);
 	},
 	_loaderscript:function() {
-		if (gbox._loaderqueue.getCurrent().call.onLoad) gbox._addtoloader({type:"exec-onl",func:gbox._loaderqueue.getCurrent().call.onLoad,call:gbox._loaderqueue.getCurrent().call});
+		if (gbox._loaderqueue.getCurrent().call.onLoad) gbox._addtoloader({
+			type:"exec-onl",
+			func:gbox._loaderqueue.getCurrent().call.onLoad,
+			call:gbox._loaderqueue.getCurrent().call
+		});
 		gbox._loadnext();
 	},
 	_loadnext:function() {
@@ -1903,6 +1911,7 @@ var gbox={
 					if (!current.call.skipCacheLoad) {
 						var data=gbox._loadercache.read(current.call.file);
 						if (data) {
+							//alert("Eval in bundle switch: " + data);
 							var pack=eval("("+data+")");
 							gbox.readBundleData(pack,current.call);
 							// Keep loading the other resources.
@@ -1940,7 +1949,6 @@ var gbox={
 				}
 			}
 		}
-	
 	},
 	_waitforloaded:function() {
 		var aul;

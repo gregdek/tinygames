@@ -2,10 +2,11 @@
 	// Graphic resources.
 	addImage:[	
 		["logo","resources/mongo/logo.png"],
+		//["test-video","resources/mongo/test.ogv"],
 		["sprites","resources/mongo/cels3.png"],
 		["font","resources/mongo/font.png"],
 		["fontbig","resources/mongo/fontbig.png"],
-		["99numbers","resources/mongo/99numbers.png"]
+		["99numbers","resources/mongo/99numbers.png"],
 	],
 	addFont:[
 		{id:"small",image:"font",firstletter:" ",tileh:8,tilew:8,tilerow:255,gapx:0,gapy:0},
@@ -41,6 +42,12 @@
 		
 		{id:"house",image:"sprites",tileh:90,tilew:90,tilerow:1,gapx:0,gapy:412}
 	],
+
+	// Video resources
+	//addVideo:[
+	//	{id:"test-video",video:"resources/mongo/test.ogv",colh:300,colw:200}
+	//],
+	
 	
 	// Audio resources	
 	addAudio:[
@@ -61,7 +68,7 @@
 		["megaexplosion",[audioserver+"megaexplosion.mp3",audioserver+"megaexplosion.ogg"],{channel:"sfx"}],
 		["hurt",[audioserver+"eat.mp3",audioserver+"eat.ogg"],{channel:"sfx"}]
 	],
-	
+
 	addBundle:[
 		{file:"resources/mongo/bundle-credits.js"}
 	]
