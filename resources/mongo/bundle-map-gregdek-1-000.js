@@ -126,13 +126,10 @@
 						maingame.setTileInMap(xc,yc,ontile+100,true);
 					}
 
-					// On stairs?  Go to the next level.
-					// Or, you know, pop up a video.
-					// <iframe title="YouTube video player" width="560" height="349" src="http://www.youtube.com/embed/y4C81qAa3pY?rel=0" 
-					// frameborder="0" allowfullscreen></iframe>
-					if ((ontile==203) && (!tilemaps.queststatus["gregdek-1-000-video"])) {
-						tilemaps.queststatus["gregdek-1-000-video"] = true;
-						maingame.modalVideo("gregdek-1-000-video");
+					// VIDEO TEST CODE.  Redacted, for now.
+					//if ((ontile==203) && (!tilemaps.queststatus["gregdek-1-000-video"])) {
+						//tilemaps.queststatus["gregdek-1-000-video"] = true;
+						//maingame.modalVideo("gregdek-1-000-video");
 						//gbox.getObject("player","player").doPause(true);
 						//winparams = 
 						//	'width=50,height=50,left=300,top=300,' +
@@ -149,7 +146,7 @@
 						//timer = setInterval('polling()',100);
 						//gbox.getObject("player","player").doPause(false);
 					}
-                                        // if (ontile==203) { maingame.gotoLevel({level:"gregdek-1-001",x:90,y:90,introdialogue:true,label:"Dungeon Level 1: Land of the Odd"}); }
+                                        if (ontile==203) { maingame.gotoLevel({level:"gregdek-1-001",x:90,y:90,introdialogue:true,label:"Dungeon Level 1: Land of the Odd"}); }
 
 					// On trigger?  Create the stairs.
 
