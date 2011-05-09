@@ -143,7 +143,7 @@ Based on the work by Francesco Cottone, http://www.kesiev.com/
 				
 				// Here the map is loaded. During the load time, the game is still.
 				gbox.addBundle({
-					file:"resources/tutorial/bundle-map-"+level.level+".js",
+					file:"resources/tutorial1/bundle-map-"+level.level+".js",
 					onLoad:function(){ // This "onload" operation is triggered after everything is loaded.
 						help.finalizeTilemap(tilemaps.map); // Finalize the map into the bundle
 						gbox.createCanvas("tileslayer",{w:tilemaps.map.w,h:tilemaps.map.h}); // Prepare map's canvas
@@ -1279,7 +1279,7 @@ Based on the work by Francesco Cottone, http://www.kesiev.com/
 		
 		audioserver="resources/audio/"
 
-		gbox.addBundle({file:"resources/tutorial/bundle.js"}); // Audio, sprites, fonts etc. are loaded here now. Cleaner code! Btw you can still load resources from the code, like in Capman.
+		gbox.addBundle({file:"resources/tutorial1/bundle.js"}); // Audio, sprites, fonts etc. are loaded here now. Cleaner code! Btw you can still load resources from the code, like in Capman.
 		
 		gbox.loadAll(go);
 	}, false);

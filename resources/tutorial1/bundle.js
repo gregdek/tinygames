@@ -1,11 +1,10 @@
 {
 	// Graphic resources.
 	addImage:[	
-		["logo","resources/tutorial/logo.png"],
-		["sprites","resources/tutorial/cels3.png"],
-		["font","resources/tutorial/font.png"],
-		["fontbig","resources/tutorial/fontbig.png"],
-		["99numbers","resources/tutorial/99numbers.png"],
+		["logo","resources/tutorial1/logo.png"],
+		["sprites","resources/tutorial1/cels.png"],
+		["font","resources/tutorial1/font.png"],
+		["fontbig","resources/tutorial1/fontbig.png"],
 	],
 	addFont:[
 		{id:"small",image:"font",firstletter:" ",tileh:8,tilew:8,tilerow:255,gapx:0,gapy:0},
@@ -63,6 +62,6 @@
 	],
 
 	addBundle:[
-		{file:"resources/mongo/bundle-credits.js"}
+		{file:"resources/tutorial1/bundle-credits.js"}
 	]
 }
