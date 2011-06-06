@@ -50,6 +50,7 @@ var gamecycle={
 			if (reset) {
 				gbox.stopChannel("bgmusic");
 				toys.resetToy(this,"default-blinker");
+				toys.resetToy(this,"default-blinker2");
 			} else {
 				gbox.blitFade(gbox.getBufferContext(),{alpha:1});
 				return toys.text.blink(this,"default-blinker",gbox.getBufferContext(),{font:"small",text:"LETS BEGIN!",valign:gbox.ALIGN_MIDDLE,halign:gbox.ALIGN_CENTER,dx:0,dy:0,dw:gbox.getScreenW(),dh:gbox.getScreenH(),blinkspeed:5,times:6});
@@ -112,6 +113,7 @@ var gamecycle={
 		gameEndingIntroAnimation:function(reset) {
 			if (reset) {
 				toys.resetToy(this,"default-blinker");
+				toys.resetToy(this,"default-blinker2");
 			} else {
 				gbox.blitFade(gbox.getBufferContext(),{alpha:1});
 				return toys.text.blink(this,"default-blinker",gbox.getBufferContext(),{font:"small",text:"CONGRATULATIONS!",valign:gbox.ALIGN_MIDDLE,halign:gbox.ALIGN_CENTER,dx:0,dy:0,dw:gbox.getScreenW(),dh:gbox.getScreenH(),blinkspeed:5,times:10});
@@ -123,7 +125,7 @@ var gamecycle={
 			if (reset) {
 				toys.resetToy(this,"default-blinker");
 			} else {
-				toys.text.blink(this,"default-blinker",gbox.getBufferContext(),{font:"small",text:"PRESS A TO START",valign:gbox.ALIGN_MIDDLE,halign:gbox.ALIGN_CENTER,dx:0,dy:Math.floor(gbox.getScreenH()/3),dw:gbox.getScreenW(),dh:Math.floor(gbox.getScreenH()/3)*2,blinkspeed:10});
+				toys.text.blink(this,"default-blinker",gbox.getBufferContext(),{font:"small",text:"Z, X, ARROWS TO PLAY",valign:gbox.ALIGN_MIDDLE,halign:gbox.ALIGN_CENTER,dx:0,dy:Math.floor(gbox.getScreenH()/3),dw:gbox.getScreenW(),dh:Math.floor(gbox.getScreenH()/3)*2,blinkspeed:30});
 				return gbox.keyIsHit("a");
 			}
 		},
