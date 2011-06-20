@@ -59,7 +59,7 @@
 					[   0,  0,  0,  0, 10,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 10,  0],
 					[   0,  0,  0, 11, 11, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
 					[   0,  0,  0, 11, 11,  0,  0,  0,  0,  0, 11, 11,  0,  0,  0,  0,  0],
-					[   0,  0,  0, 10,  0,  0,  0,  0,  0,  0,  0, 11,  0,  0,  0,  0,  0],
+					[   0,  0,  0, 10,  0, 11,  0,  0,  0,  0,  0, 11,  0,  0,  0,  0,  0],
 					[   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
 					[   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
 					[   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
@@ -72,7 +72,9 @@
 					maingame.addBlock(360,150,"house",0);
 					maingame.addNpc(390,220,[4],"villager",null,[4,5]);
 					maingame.addNpc(150,180,[6],"wife",null,[6,7]);
-					//maingame.addPuzzleblock(10,210,"chest",0);
+					maingame.addPuzzleblock(40,210,"chest",0);
+					//maingame.addPuzzler(2,8,"treasure1",false,"coin");
+					//maingame.addChest(2,8,"treasure1",false,"coin");
 				 },
 				 mapActions:function() {
 					// Get the player object to work with
