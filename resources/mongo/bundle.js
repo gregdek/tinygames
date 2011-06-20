@@ -3,7 +3,7 @@
 	addImage:[	
 		["logo","resources/mongo/logo.png"],
 		//["test-video","resources/mongo/test.ogv"],
-		["sprites","resources/mongo/cels3.png"],
+		["sprites","resources/mongo/cels5.png"],
 		["font","resources/mongo/font.png"],
 		["fontbig","resources/mongo/fontbig.png"],
 		["99numbers","resources/mongo/99numbers.png"],
@@ -40,7 +40,8 @@
 		{id:"items",image:"sprites",tileh:20,tilew:20,tilerow:10,gapx:0,gapy:362}, // currently just weapons
 		{id:"npc",image:"sprites",tileh:30,tilew:30,tilerow:10,gapx:0,gapy:382},
 		
-		{id:"house",image:"sprites",tileh:90,tilew:90,tilerow:1,gapx:0,gapy:412}
+		{id:"house",image:"sprites",tileh:90,tilew:90,tilerow:1,gapx:0,gapy:412},
+		{id:"digit",image:"sprites",tileh:30,tilew:30,tilerow:10,gapx:0,gapy:502}
 	],
 
 	// Video resources
