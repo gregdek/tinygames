@@ -14,7 +14,7 @@
 		["map-bgm",["resources/audio/tlol-cave.mp3","resources/audio/tlol-cave.ogg"],{channel:"bgmusic",loop:true}],	
 	],
 
-	// Tileset image...
+	// Map graphics...
 
 	addImage:[	
 		["tiles","resources/tutorial1/basic-cave.png"],
