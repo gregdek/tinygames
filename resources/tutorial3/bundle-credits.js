@@ -10,6 +10,10 @@
 					push:gbox.getScreenHH(),
 					audiomusic:"ending",
 					scroller:[
+						"A WINNER IS YOU!",
+						"","","",
+						"TUTORIAL3 COMPLETE.",
+						"",
 						"DUNGEONS OF MONGO",
 						"A TINYGAME BY GREGDEK",
 						"","","",

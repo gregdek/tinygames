@@ -163,6 +163,7 @@
 								// ...and add tile 13 here, which is the
 								// wall tile for the number 3.
 								maingame.setTileInMap(pbx,pby,13,false);
+								maingame.gameIsCompleted();
 							}
 							else {
 								// No.  Bad things happen!
@@ -183,12 +184,8 @@
 						}
 					} 
 
-					// If he's in a cave, figure out which cave he's in and send him to the right dungeon.
-					if ((ontile==1) && (xc>=1) && (xc<=2)) maingame.gotoLevel({level:"gregdek-1-000",x:60,y:60,introdialogue:true,label:"Greg's First Quest"});
-					if ((ontile==1) && (xc>=4) && (xc<=5)) maingame.gotoLevel({level:"gregdek-2-000",x:60,y:60,introdialogue:true,label:"Greg's Second Quest"});
-					if ((ontile==1) && (xc>=7) && (xc<=8)) maingame.gotoLevel({level:"gregdek-3-000",x:(17*30),y:(11*30),introdialogue:false,label:"Greg's Third Quest"});
-					if ((ontile==1) && (xc>=11) && (xc<=14)) maingame.gotoLevel({level:"gregdek-4-000",x:60,y:60,introdialogue:true,label:"Greg's Fourth Quest"});
-					if ((ontile==1) && (xc>14)) maingame.gotoLevel({level:"generic-000",x:60,y:60,introdialogue:true,label:"Unclaimed Cave"});
+					// Sample code for how we might leave the cave.
+					// if ((ontile==1) && (xc>14)) maingame.gotoLevel({level:"generic-000",x:60,y:60,introdialogue:true,label:"Unclaimed Cave"});
 				 },
 				// Solid tiles: 10-19 (numbers) and 30 (wall).
 				tileIsSolid:function(obj,t){ return (((t>=10) && (t<=19)) || (t==30)) }
