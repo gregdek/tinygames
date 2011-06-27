@@ -789,67 +789,6 @@ Based on the work by Francesco Cottone, http://www.kesiev.com/
 			  });
 		}
 		
-		// Add a still object. Are sprites that supports the z-index (houses, trees.) You can walk around these objects
-		maingame.addPuzzleblock=function(x,y,tileset,frame) {
-			gbox.addObject({
-				group:"walls",
-				tileset:tileset,
-				zindex:0, // Needed for zindexed objects
-				x:x,
-				y:y,
-				frame:frame,
-								
-				initialize:function() {
-					toys.topview.initialize(this); // Any particular initialization. Just the auto z-index
-				},
-
-				first:function() {
-					// GDK: ripped off from move enemy function (and broke the shit out of it!)
-
-					// First, set the object to react if force is applied, by using the topview.applyForces function.
-					if (!this.stilltimer) toys.topview.applyForces(this); // Apply forces
-
-					// Without handleAccellerations, the object, once given an accx or accy value, would go
-					// right off the screen.  Adding this function slows it down every turn until it stops.
-					toys.topview.handleAccellerations(this);
-
-					// Not used yet
-					//toys.topview.handleGravity(this); // z-gravity
-					//toys.topview.applyGravity(this); // z-gravity
-
-					// This works for collisions on the map level.
-					toys.topview.tileCollision(this,tilemaps.map,"map",100); // tile collisions
-
-					// GDK: WHY DOES THE FOLLOWING LINE MAKE THE BOX DISAPPEAR AT STARTUP???
-					// toys.topview.spritewallCollision(this,{group:"walls"}); // walls collisions
-
-					//toys.topview.floorCollision(this); // Collision with the floor (for z-gravity)
-					//toys.topview.adjustZindex(this); // Set the right zindex
-					//if (!this.stilltimer) toys.topview.setFrame(this); // set the right animation frame (if not attacking - which has still frame)
-
-					// Now, figure out if there's a collision -- and if there is, create forces
-					// that apply to the object on the next clock cycle.
-
-					var pl=gbox.getObject("player","player");
-					if (pl.collisionEnabled()&&(toys.topview.collides(this,pl))) {
-						gbox.hitAudio("coin");
-						this.accx = pl.accx*4;
-						this.accy = pl.accy*4;
-						// setting accx and accy works, so long as 
-						// rather than just setting x and y directly, but getting closer!
-					}
-				},
-		
-				blit:function() {
-					if (gbox.objectIsVisible(this)) {
-						// Then the object. Notes that the y is y-z to have the "over the floor" effect.
-						gbox.blitTile(gbox.getBufferContext(),{tileset:this.tileset,tile:this.frame,dx:this.x,dy:this.y+this.z,camera:this.camera,fliph:this.fliph,flipv:this.flipv});
-					}
-				}
-	
-			  });
-		}
-
                 maingame.addPuzzleblock=function(x,y,tileset,frame) {
                         gbox.addObject({
                                 group:"walls",
@@ -883,6 +822,7 @@ Based on the work by Francesco Cottone, http://www.kesiev.com/
                                         var thisy=help.yPixelToTileY(tilemaps.map,this.y+this.coly+this.colhh);
 
 					//alert ("px" + px + "py" + py + "thisx" + thisx + "thisy" + thisy);
+					tilemaps.queststatus["last-pb-touched"]=this.id;
 
                                         if (px==thisx) {
 						if (by.y <= this.y) {
