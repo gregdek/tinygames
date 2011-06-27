@@ -19,7 +19,8 @@
 			property:"intro",
 			value:{ font:"smalltut", skipkey:"a", esckey:"b", who: noface,
 		  		scenes:[
-		  			{ speed:1, who:"noone", audio:"beep", talk:["Solve the puzzle.","Push the blocks."]}
+		  			{ speed:1, who:"noone", audio:"beep", talk:["Want to escape?","Push the correct blue block...","(Z for more)"]},
+		  			{ speed:1, who:"noone", audio:"beep", talk:["...over the question mark.","Use the X key to push.","A mistake could be painful!"]},
 		  		]
 		  	}
 		
