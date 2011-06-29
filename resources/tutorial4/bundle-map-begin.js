@@ -1,10 +1,9 @@
 {
-	// Taking up where tutorial3 ended.  In tutorial3, we created a single level for 
-	// puzzle block pushing.  Now we're gonna add some supporting code that will
-	// allow us to build an entire level dynamically.
+	// Map graphics.  Note that we're using a new tileset here!  This tileset has lots of numbers,
+	// for players to walk over.  We'll get to that in the gameplay, below.
 
         addImage:[
-                ["tiles","resources/tutorial4/gfx-puzzle8.png"],
+                ["tiles","resources/tutorial3/gfx-puzzle8.png"],
         ],
 
 	// Tiles...
@@ -20,68 +19,67 @@
 			property:"intro",
 			value:{ font:"smalltut", skipkey:"a", esckey:"b", who: noface,
 		  		scenes:[
-		  			{ speed:1, who:"noone", audio:"beep", talk:["Solve the puzzles.","Push the blue blocks."]}
+		  			{ speed:1, who:"noone", audio:"beep", talk:["Want to escape?","Push the correct blue block...","(Z for more)"]},
+		  			{ speed:1, who:"noone", audio:"beep", talk:["...over the question mark.","Use the X key to push.","A mistake could be painful!"]},
 		  		]
 		  	}
 		
 		// Map data and actions
 		},{
+
                         object:"tilemaps",
                         property:"map",
                         value:{
                                 tileset:"tiles",
-                                map: [
-					// This is just a place holder.  The real map is being built
-					// with newmap, below.
-                                        [ 1, 1, 1 ],
-                                        [ 1, 1, 1 ],
-                                        [ 1, 1, 1 ]
-                                ],
+				// Oh, look!  There's a very helpful "asciiArtToMap" function in
+				// help.js that I rewrote by hand because I failed to read the
+				// documentation.  Clever me!  So here's the map done the *right* way.
+				//
+				// Also: note the "o" around the border of the room.  This is a 
+				// special tile that the player can walk into, but the puzzle block
+				// cannot be pushed into.  This prevents the case of "user pushes
+				// block against the wall and can't move it away from wall."
+				// Details of how this works can be found in the function 
+				// tileIsSolid, below.
+
+				map:help.asciiArtToMap([
+					'xxxxxxxxxxxxxxxx',
+					'xoooooooooooooox',
+					'xo............ox',
+					'xo.....13.....ox',
+					'xo....+22.....ox',
+					'xo.....==.....ox',
+					'xo.....?5.....ox',
+					'xo............ox',
+					'xo............ox',
+					'xo............ox',
+					'xoooooooooooooox',
+					'xxxxxxxxxxxxxxxx'
+					],[
+						[30,"x"],[31,"."],[39,"o"],
+						[11,"1"],[12,"2"],[13,"3"],[14,"4"],[15,"5"],
+						[16,"6"],[17,"7"],[18,"8"],[19,"9"],[10,"0"],
+						[34,"+"],[35,"-"],[36,"*"],[37,"="],
+						[23,"?"]
+					]
+				),
 
                                 addObjects:function() {
 
-					// newmap, as used in tutorial3 -- except this time,
-					// we're going to just overwrite the map completely.
-					var newmap=['xxxxxxxxxxxxxxx',
-					            'x.............x',
-					            'x.............x',
-					            'x.....13......x',
-					            'x....+22......x',
-					            'x.....==......x',
-					            'x.....?5......x',
-					            'x.............x',
-					            'x.............x',
-					            'xxxxxxxxxxxxxxx'];
-					var newtiles={
-						"x":30, ".":31,
-						"1":11, "2":12, "3":13, "4":14, "5":15, 
-						"6":16, "7":17, "8":18, "9":19, "0":10,
-						"+":34, "-":35, "*":36, "=":37, 
-						"?":23  // there are 10 ?, 23 is the ? for "3"
-					}; 
-					var newmaparray = [ ];
-					for (ymap=0; ymap<newmap.length; ymap++) {
-						for (xmap=0; xmap<newmap[ymap].length; xmap++) {
-							var mymaptile = newtiles[newmap[ymap].charAt(xmap)];
-							newmaparray[xmap][ymap] = mymaptile;
-							// maingame.setTileInMap(xmap,ymap,mymaptile,false);
-						}
-					}
-					// Now overwrite the map with newmaparray:
-					tilemaps["map"] = newmaparray;
-
-					// This approach also allows us to create a separate 
+					// Now add objects using a similar ASCII map approach.
 					// map for adding objects in almost exactly the same way!
-					var objmap=['xxxxxxxxxxxxxxx',
-					            'x.............x',
-					            'x.6.........1.x',
-					            'x.7.........2.x',
-					            'x.8.........3.x',
-					            'x.9.........4.x',
-					            'x.0.........5.x',
-					            'x.............x',
-					            'x.............x',
-					            'xxxxxxxxxxxxxxx'];
+					var objmap=['xxxxxxxxxxxxxxxx',
+					            'x..............x',
+					            'x..............x',
+					            'x..............x',
+					            'x..............x',
+					            'x..............x',
+					            'x..............x',
+					            'x..............x',
+					            'x..............x',
+					            'x..1234567890..x',
+					            'x..............x',
+					            'xxxxxxxxxxxxxxxx'];
 
 					// Now go through and insert object for those things we recognize.
 					// We keep the visual layout similar for ease of reconciling with the
@@ -94,10 +92,6 @@
 							}
 						}
 					}
-
-					// maingame.addPuzzleblock(40,210,"digit",5);
-					
-					// maingame.setTileInMap(1,1,99,false);
 				},
 
 				// Now we define our "mapActions".  This function is called continually
@@ -118,7 +112,6 @@
 					// Get the ID of the tile the player is on
 					var ontile=help.getTileInMap(pl.x+pl.colx+pl.colhw,pl.y+pl.coly+pl.colhh,tilemaps.map,tilemaps._defaultblock,"map");
 
-
 					// Now we need to figure out: "is the block the player last touched 
 					// on a question mark?  And if so, is it the right one or the wrong one?"
 
@@ -136,6 +129,7 @@
 					// the object, which holds the "digit" that we care about.
 
 					// We don't want to check if the player hasn't touched an object yet.
+
 					if (tilemaps.queststatus["last-pb-touched"]) {
 						var pb = gbox.getObject("walls",tilemaps.queststatus["last-pb-touched"]);
                                 	        var pbx=help.xPixelToTileX(tilemaps.map,pb.x+pb.colx+pb.colhw);
@@ -177,8 +171,17 @@
 					// Sample code for how we might leave the cave.
 					// if ((ontile==1) && (xc>14)) maingame.gotoLevel({level:"generic-000",x:60,y:60,introdialogue:true,label:"Unclaimed Cave"});
 				 },
-				// Solid tiles: 10-19 (numbers) and 30 (wall).
-				tileIsSolid:function(obj,t){ return (((t>=10) && (t<=19)) || (t==30)) }
+				// Solid tiles is a little more complex here.  We want to have different "solid tiles"
+				// for player versus puzzle block.  We're going to use a ternary operator here:
+				// (statement) ? (true clause) : (false clause)
+				// So -- ret
+				tileIsSolid:function(obj,t){ 
+					return (obj.id == 'player'   				// if object is the player
+						? (((t>=10) && (t<=19)) || (t==30)) 		// then, these tiles are solid
+						: (((t>=10) && (t<=19)) || (t==30) || (t==39))  // else, these tiles are solid
+					)
+					// return (((t>=10) && (t<=19)) || (t==30)) 
+				}
 			}
 		}
 	]

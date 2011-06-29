@@ -1,11 +1,12 @@
 {
 	// Graphic resources.
 	addImage:[	
-		["logo","resources/tutorial4/logo.png"],
-		["sprites","resources/tutorial4/cels5.png"],
-		["font","resources/tutorial4/font.png"],
-		["fontbig","resources/tutorial4/fontbig.png"],
-		["99numbers","resources/tutorial4/99numbers.png"],
+		["logo","resources/tutorial3/logo.png"],
+		//["test-video","resources/tutorial3/test.ogv"],
+		["sprites","resources/tutorial3/cels5.png"],
+		["font","resources/tutorial3/font.png"],
+		["fontbig","resources/tutorial3/fontbig.png"],
+		["99numbers","resources/tutorial3/99numbers.png"],
 	],
 	addFont:[
 		{id:"small",image:"font",firstletter:" ",tileh:8,tilew:8,tilerow:255,gapx:0,gapy:0},
@@ -43,6 +44,12 @@
 		{id:"digit",image:"sprites",tileh:30,tilew:30,tilerow:10,gapx:0,gapy:502}
 	],
 
+	// Video resources
+	//addVideo:[
+	//	{id:"test-video",video:"resources/tutorial3/test.ogv",colh:300,colw:200}
+	//],
+	
+	
 	// Audio resources	
 	addAudio:[
 		["default-music",[audioserver+"tlol-intro.mp3",audioserver+"tlol-intro.ogg"],{channel:"bgmusic",loop:true}],
@@ -64,6 +71,6 @@
 	],
 
 	addBundle:[
-		{file:"resources/tutorial4/bundle-credits.js"}
+		{file:"resources/tutorial3/bundle-credits.js"}
 	]
 }
