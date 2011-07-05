@@ -6,7 +6,9 @@
                 ["tiles","resources/tutorial3/gfx-puzzle8.png"],
         ],
 
-	// Tiles...
+	// Tiles.  Basically, this says: "tiles in the file above (gfx-puzzle8) are
+	// 30 pixels high and 30 pixels wide, and there are 10 tiles per row.  So the
+	// first 10 tiles are 0-9, the second row of tiles are 10-19, and so on.
 
 	addTiles:[
 		{id:"tiles",image:"tiles",tileh:30,tilew:30,tilerow:10,gapx:0,gapy:0},	
@@ -58,6 +60,10 @@
 					'xxxxxxxooxxxxxxx',
 					'xxxxxxxooxxxxxxx'
 					],[
+						// The tile mappings that correspond with the
+						// tiles defined in addTiles, above.  The 
+						// character "x" in the map represents tile
+						// 30, and so on.  
 						[30,"x"],[31,"."],[39,"o"],
 						[11,"1"],[12,"2"],[13,"3"],[14,"4"],[15,"5"],
 						[16,"6"],[17,"7"],[18,"8"],[19,"9"],[10,"0"],
