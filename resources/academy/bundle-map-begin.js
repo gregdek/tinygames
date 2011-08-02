@@ -218,8 +218,9 @@
 
 					// quest a: bronze boots of addition
 					if ((!tilemaps.queststatus["bronze boots of addition"]) && (xc==10) && (yc==1)) {
-						tilemaps.queststatus["bronze boots of addition"] = true;
-						maingame.addQuestClear("bronze boots of addition received!");
+						maingame.gotoLevel({level:"addition-1",x:(2*30),y:(2*30),label:"Bronze Cave"});
+						// tilemaps.queststatus["bronze boots of addition"] = true;
+						// maingame.addQuestClear("bronze boots of addition received!");
 					}
 					// quest b: bronze gauntlets of subtraction
 					if ((!tilemaps.queststatus["bronze gauntlets of subtraction"]) && (xc==13) && (yc==7)) {
@@ -264,11 +265,6 @@
 					//	maingame.setTileInMap(8,0,31,true);
 					//	tilemaps.queststatus["doortriggered"] = true;
 					//}
-
-					// Is the player standing on the door?  Take them to the next level!
-					if ((yc==0) && ((xc==7)||(xc==8))) {
-						maingame.gotoLevel({level:"labyrinth",x:(7*30),y:(11*30),label:"The Labyrinth!"});
-					}
 				},
 
 				tileIsSolid:function(obj,t){ 

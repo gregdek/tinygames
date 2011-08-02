@@ -7,7 +7,6 @@
 	<script type="text/javascript" src="akihabara/help.js"></script>
 	<script type="text/javascript" src="akihabara/tool.js"></script>
 	<script type="text/javascript" src="akihabara/gamecycle.js"></script>
-	<script type="text/javascript" src="../externals/js/jquery.js"></script>
 	<style>BODY { -webkit-user-select:none; margin:0px}</style>
 	<style>
 		#mask { position:absolute; z-index:9000; background-color:#000; display:none; }
@@ -17,43 +16,11 @@
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 </head>
 <body>
-<!--a href="#dialog" name="modal">Simple Modal Window</a-->
-<div id="boxes">
-    <!-- #customize your modal window here -->
-    <div id="dialog" class="window">
-        <!--video src="/~gregdek/MONGO/akihabara/resources/academy/test.ogv" height="300" width="200" controls>No video, sorry!</video-->
-        <video src="/~gregdek/MONGO/externals/prime-factors.ogv" height="300" width="200" controls>No video, sorry!</video>
-        <b>Testing of Modal Window</b> |
-        <!-- close button is defined as close class -->
-        <a href="#" class="close">Close it</a>
-    </div>
-    <!-- Do not remove div#mask, because you'll need it to fill the whole screen --> 
-    <div id="mask"></div>
-</div>
 </body>
 <script>
 // ---
 // Copyright (c) 2010 Francesco Cottone, http://www.kesiev.com/
 // ---
-
-// Jquery Video Popup Hack -- closing window
-
-$(document).ready(function() {
-
-    //if close button is clicked
-    $('.window .close').click(function (e) {
-        //Cancel the link behavior
-        e.preventDefault();
-        $('#mask, .window').hide();
-    });    
-     
-    //if mask is clicked
-    $('#mask').click(function () {
-        $(this).hide();
-        $('.window').hide();
-    });         
-
-});
 
 		  // Game-specific
 		  
@@ -897,7 +864,7 @@ $(document).ready(function() {
                                         var thisy=help.yPixelToTileY(tilemaps.map,this.y+this.coly+this.colhh);
 
 					//alert ("px" + px + "py" + py + "thisx" + thisx + "thisy" + thisy);
-
+					tilemaps.queststatus["last-pb-touched"]=this.id;
                                         if (px==thisx) {
 						if (by.y <= this.y) {
 							this.accy=5;
